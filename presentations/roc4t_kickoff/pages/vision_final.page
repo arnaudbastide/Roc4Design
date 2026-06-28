@@ -1,0 +1,102 @@
+pageType: final
+background:
+  type: solid
+  color: "#0F172A"
+elements:
+  - elementId: top-accent
+    elementType: shape
+    bounds: [0, 0, 1280, 4]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#3B82F6"
+  - elementId: title
+    elementType: text
+    bounds: [140, 40, 1000, 70]
+    content:
+      fontSize: 44
+      color: "#F8FAFC"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>The Future of Engineering</strong></p>
+  - elementId: divider
+    elementType: shape
+    bounds: [540, 120, 200, 3]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#3B82F6"
+  - elementId: flow-col
+    elementType: text
+    bounds: [340, 140, 600, 320]
+    content:
+      fontSize: 14
+      color: "#94A3B8"
+      fontFamily: "Arial"
+      lineHeight: 1.5
+      align: [center, top]
+      text: |
+        <p><span style="color:#3B82F6;">▲</span> Engineering Intent</p>
+        <p><span style="color:#3B82F6;">↓</span></p>
+        <p><span style="color:#3B82F6;">▲</span> AI Orchestrator</p>
+        <p><span style="color:#3B82F6;">↓</span></p>
+        <p><span style="color:#3B82F6;">▲</span> Knowledge Platform</p>
+        <p><span style="color:#3B82F6;">↓</span></p>
+        <p><span style="color:#3B82F6;">▲</span> Multi-Agent System</p>
+        <p><span style="color:#3B82F6;">↓</span></p>
+        <p><span style="color:#3B82F6;">▲</span> MCP Layer</p>
+        <p><span style="color:#3B82F6;">↓</span></p>
+        <p><span style="color:#3B82F6;">▲</span> Engineering Software</p>
+        <p><span style="color:#3B82F6;">↓</span></p>
+        <p><span style="color:#3B82F6;">▲</span> Validated Deliverables</p>
+        <p><span style="color:#3B82F6;">↓</span></p>
+        <p><span style="color:#3B82F6;">▲</span> Digital Twin</p>
+  - elementId: quote
+    elementType: text
+    bounds: [190, 470, 900, 80]
+    content:
+      fontSize: 24
+      color: "#F8FAFC"
+      fontFamily: "Arial"
+      align: [center, middle]
+      lineHeight: 1.4
+      text: |
+        <p><em>"We don't automate CAD. We orchestrate engineering intelligence."</em></p>
+  - elementId: bottom-divider
+    elementType: shape
+    bounds: [540, 570, 200, 2]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#3B82F6"
+  - elementId: brand
+    elementType: text
+    bounds: [340, 590, 300, 30]
+    content:
+      fontSize: 20
+      color: "#F8FAFC"
+      fontFamily: "Arial"
+      align: [right, middle]
+      wrap: false
+      text: |
+        <p><strong>Roc4Design</strong></p>
+  - elementId: tagline
+    elementType: text
+    bounds: [640, 590, 300, 30]
+    content:
+      fontSize: 14
+      color: "#94A3B8"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>Engineering Operating System</p>
+  - elementId: bottom-accent
+    elementType: shape
+    bounds: [0, 716, 1280, 4]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#3B82F6"

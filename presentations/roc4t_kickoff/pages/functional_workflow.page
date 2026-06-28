@@ -1,0 +1,380 @@
+pageType: content
+background:
+  type: solid
+  color: "#FFFFFF"
+elements:
+  - elementId: nav-label
+    elementType: text
+    bounds: [60, 24, 250, 22]
+    content:
+      style: "$caption"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>06 / Functional Workflow</p>
+  - elementId: heading
+    elementType: text
+    bounds: [60, 60, 700, 42]
+    content:
+      style: "$heading"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Functional Workflow</strong></p>
+  - elementId: accent-bar
+    elementType: shape
+    bounds: [60, 112, 80, 4]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: step1
+    elementType: shape
+    bounds: [60, 150, 200, 50]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: step1-text
+    elementType: text
+    bounds: [60, 150, 200, 50]
+    content:
+      fontSize: 13
+      color: "$primary"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>1. Need</strong></p>
+  - elementId: arrow1
+    elementType: shape
+    bounds: [260, 175, 30, 0]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    border:
+      style: solid
+      width: 2
+      color: "$accent"
+  - elementId: step2
+    elementType: shape
+    bounds: [290, 150, 200, 50]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: step2-text
+    elementType: text
+    bounds: [290, 150, 200, 50]
+    content:
+      fontSize: 13
+      color: "$text"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>2. Base</strong></p>
+  - elementId: arrow2
+    elementType: shape
+    bounds: [490, 175, 30, 0]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    border:
+      style: solid
+      width: 2
+      color: "$accent"
+  - elementId: step3
+    elementType: shape
+    bounds: [520, 150, 200, 50]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: step3-text
+    elementType: text
+    bounds: [520, 150, 200, 50]
+    content:
+      fontSize: 13
+      color: "$text"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>3. AI Automates</strong></p>
+  - elementId: arrow3
+    elementType: shape
+    bounds: [720, 175, 30, 0]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    border:
+      style: solid
+      width: 2
+      color: "$accent"
+  - elementId: step4
+    elementType: shape
+    bounds: [750, 150, 200, 50]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: step4-text
+    elementType: text
+    bounds: [750, 150, 200, 50]
+    content:
+      fontSize: 13
+      color: "$text"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>4. Consolidate</strong></p>
+  - elementId: arrow4
+    elementType: shape
+    bounds: [950, 175, 30, 0]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    border:
+      style: solid
+      width: 2
+      color: "$accent"
+  - elementId: step5
+    elementType: shape
+    bounds: [980, 150, 200, 50]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: step5-text
+    elementType: text
+    bounds: [980, 150, 200, 50]
+    content:
+      fontSize: 13
+      color: "$text"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>5. Digital Twin View</strong></p>
+  - elementId: arrow-down
+    elementType: shape
+    bounds: [1080, 200, 0, 30]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    border:
+      style: solid
+      width: 2
+      color: "$accent"
+  - elementId: step6
+    elementType: shape
+    bounds: [60, 230, 200, 24]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: step6-text
+    elementType: text
+    bounds: [980, 230, 200, 24]
+    content:
+      fontSize: 13
+      color: "$text"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>6. Lead Explores</strong></p>
+  - elementId: arrow-left1
+    elementType: shape
+    bounds: [840, 255, 140, 0]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    flip: [true, false]
+    border:
+      style: solid
+      width: 2
+      color: "$accent"
+  - elementId: step7
+    elementType: shape
+    bounds: [750, 230, 200, 24]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: step7-text
+    elementType: text
+    bounds: [750, 230, 200, 24]
+    content:
+      fontSize: 13
+      color: "$primary"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>7. Request</strong></p>
+  - elementId: arrow-left2
+    elementType: shape
+    bounds: [610, 255, 140, 0]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    flip: [true, false]
+    border:
+      style: solid
+      width: 2
+      color: "$accent"
+  - elementId: step8
+    elementType: shape
+    bounds: [520, 230, 200, 24]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: step8-text
+    elementType: text
+    bounds: [520, 230, 200, 24]
+    content:
+      fontSize: 13
+      color: "$text"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>8. AI Modifies</strong></p>
+  - elementId: arrow-left3
+    elementType: shape
+    bounds: [380, 255, 140, 0]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    flip: [true, false]
+    border:
+      style: solid
+      width: 2
+      color: "$accent"
+  - elementId: step9
+    elementType: shape
+    bounds: [290, 230, 200, 24]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: step9-text
+    elementType: text
+    bounds: [290, 230, 200, 24]
+    content:
+      fontSize: 13
+      color: "$text"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>9. 3D Update</strong></p>
+  - elementId: arrow-left4
+    elementType: shape
+    bounds: [150, 255, 140, 0]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    flip: [true, false]
+    border:
+      style: solid
+      width: 2
+      color: "$accent"
+  - elementId: step10
+    elementType: shape
+    bounds: [60, 230, 200, 24]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: step10-text
+    elementType: text
+    bounds: [60, 230, 200, 24]
+    content:
+      fontSize: 13
+      color: "$text"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>10. Validate</strong></p>
+  - elementId: desc-card
+    elementType: shape
+    bounds: [60, 320, 1160, 340]
+    shapeName: roundRect
+    adjustments: [4000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: desc-title
+    elementType: text
+    bounds: [80, 336, 400, 28]
+    content:
+      fontSize: 16
+      color: "$accent"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Ideal Production Flow</strong></p>
+  - elementId: desc-body
+    elementType: text
+    bounds: [80, 372, 1120, 280]
+    content:
+      fontSize: 15
+      color: "$textMuted"
+      fontFamily: "Arial"
+      lineHeight: 1.5
+      align: [left, top]
+      text: |
+        <p><span style="color:$text;">1.</span> Client/Lead expresses a need</p>
+        <p><span style="color:$text;">2.</span> Designers prepare a first base in AutoCAD or Revit</p>
+        <p><span style="color:$text;">3.</span> AI agent automates repetitive tasks and prepares variants</p>
+        <p><span style="color:$text;">4.</span> Project is consolidated into a clean model</p>
+        <p><span style="color:$text;">5.</span> Model is pushed to Digital Twin Platform</p>
+        <p><span style="color:$text;">6.</span> Lead explores the project</p>
+        <p><span style="color:$text;">7.</span> Lead requests changes (e.g., "move this partition 20cm")</p>
+        <p><span style="color:$text;">8.</span> AI applies modifications in Revit/AutoCAD</p>
+        <p><span style="color:$text;">9.</span> Digital Twin is updated</p>
+        <p><span style="color:$text;">10.</span> Project returns to validation or production</p>

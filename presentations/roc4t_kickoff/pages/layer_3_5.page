@@ -1,0 +1,232 @@
+pageType: content
+background:
+  type: solid
+  color: "#FFFFFF"
+elements:
+  - elementId: nav-label
+    elementType: text
+    bounds: [60, 24, 250, 22]
+    content:
+      style: "$caption"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>05 / Layer 3-5</p>
+  - elementId: heading
+    elementType: text
+    bounds: [60, 60, 700, 42]
+    content:
+      style: "$heading"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Layer 3-5: MCP, Digital Twin Platform, AI Orchestrator</strong></p>
+  - elementId: accent-bar
+    elementType: shape
+    bounds: [60, 112, 80, 4]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: mcp-card
+    elementType: shape
+    bounds: [60, 140, 370, 260]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: mcp-badge
+    elementType: shape
+    bounds: [80, 156, 100, 24]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: mcp-badge-text
+    elementType: text
+    bounds: [80, 156, 100, 24]
+    content:
+      fontSize: 12
+      color: "$primary"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>LAYER 3</strong></p>
+  - elementId: mcp-title
+    elementType: text
+    bounds: [80, 190, 330, 28]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>MCP Bridge</strong></p>
+  - elementId: mcp-body
+    elementType: text
+    bounds: [80, 224, 330, 160]
+    content:
+      fontSize: 14
+      color: "$textMuted"
+      fontFamily: "Arial"
+      lineHeight: 1.5
+      align: [left, top]
+      text: |
+        <p>Bridge between AI agent and design software.</p>
+        <p style="margin-top:6px">Options:</p>
+        <p>• Official Autodesk MCP</p>
+        <p>• Open-source MCP (Python/COM)</p>
+        <p>• Custom Roc4Design MVP MCP</p>
+  - elementId: review-card
+    elementType: shape
+    bounds: [455, 140, 370, 260]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: review-badge
+    elementType: shape
+    bounds: [475, 156, 100, 24]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: review-badge-text
+    elementType: text
+    bounds: [475, 156, 100, 24]
+    content:
+      fontSize: 12
+      color: "$primary"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>LAYER 4</strong></p>
+  - elementId: review-title
+    elementType: text
+    bounds: [475, 190, 330, 28]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Digital Twin Platform</strong></p>
+  - elementId: review-body
+    elementType: text
+    bounds: [475, 224, 330, 160]
+    content:
+      fontSize: 14
+      color: "$textMuted"
+      fontFamily: "Arial"
+      lineHeight: 1.5
+      align: [left, top]
+      text: |
+        <p>Visualization and validation layer for non-technical stakeholders.</p>
+        <p style="margin-top:6px">Navigate the project, understand volumes, identify issues, request changes via natural language.</p>
+  - elementId: ai-card
+    elementType: shape
+    bounds: [850, 140, 370, 260]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: ai-badge
+    elementType: shape
+    bounds: [870, 156, 100, 24]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: ai-badge-text
+    elementType: text
+    bounds: [870, 156, 100, 24]
+    content:
+      fontSize: 12
+      color: "$primary"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>LAYER 5</strong></p>
+  - elementId: ai-title
+    elementType: text
+    bounds: [870, 190, 330, 28]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>AI Orchestrator</strong></p>
+  - elementId: ai-body
+    elementType: text
+    bounds: [870, 224, 330, 160]
+    content:
+      fontSize: 14
+      color: "$textMuted"
+      fontFamily: "Arial"
+      lineHeight: 1.5
+      align: [left, top]
+      text: |
+        <p>Conductor between all layers.</p>
+        <p style="margin-top:6px">Architecture: <span style="color:$text;">Planner → Generator → Verifier</span></p>
+        <p style="margin-top:6px">Reads natural language, chooses the right tool, launches actions, verifies errors, prepares exports.</p>
+  - elementId: recommended-path
+    elementType: shape
+    bounds: [60, 430, 1160, 200]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill:
+      type: solid
+      color: "#F1F5F9"
+    border:
+      style: solid
+      width: 2
+      color: "#3B82F6"
+  - elementId: path-title
+    elementType: text
+    bounds: [80, 444, 400, 28]
+    content:
+      fontSize: 16
+      color: "$accent"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Recommended Path for Roc4Design</strong></p>
+  - elementId: path-body
+    elementType: text
+    bounds: [80, 480, 1120, 140]
+    content:
+      fontSize: 15
+      color: "$textMuted"
+      fontFamily: "Arial"
+      lineHeight: 1.5
+      align: [left, top]
+      text: |
+        <p><span style="color:$text;"><strong>Phase 1:</strong></span> Use open-source MCP AutoCAD for local POC</p>
+        <p><span style="color:$text;"><strong>Phase 2:</strong></span> Encapsulate with Roc4Design standards, templates, logs</p>
+        <p><span style="color:$text;"><strong>Phase 3:</strong></span> Connect to official Autodesk MCP if deep APS/cloud usage emerges</p>

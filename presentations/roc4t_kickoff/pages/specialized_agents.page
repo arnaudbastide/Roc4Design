@@ -1,0 +1,254 @@
+pageType: content
+background:
+  type: solid
+  color: "#FFFFFF"
+elements:
+  - elementId: nav-label
+    elementType: text
+    bounds: [60, 24, 300, 22]
+    content:
+      style: "$caption"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>06 / Specialized AI Agents</p>
+  - elementId: heading
+    elementType: text
+    bounds: [60, 60, 900, 42]
+    content:
+      style: "$heading"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Specialized AI Agents</strong></p>
+  - elementId: accent-bar
+    elementType: shape
+    bounds: [60, 112, 80, 4]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#3B82F6"
+  - elementId: center-bg
+    elementType: shape
+    bounds: [490, 240, 300, 70]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "#1E3A5F"
+  - elementId: center-text
+    elementType: text
+    bounds: [490, 240, 300, 70]
+    content:
+      fontSize: 16
+      color: "#FFFFFF"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Central AI Orchestrator</strong></p>
+  - elementId: agent1-bg
+    elementType: shape
+    bounds: [60, 140, 200, 40]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "#F1F5F9"
+    border:
+      style: solid
+      width: 1
+      color: "#3B82F6"
+  - elementId: agent1-text
+    elementType: text
+    bounds: [60, 140, 200, 40]
+    content:
+      fontSize: 13
+      color: "#1E3A5F"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Requirement Agent</strong></p>
+  - elementId: agent2-bg
+    elementType: shape
+    bounds: [280, 140, 200, 40]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "#F1F5F9"
+    border:
+      style: solid
+      width: 1
+      color: "#3B82F6"
+  - elementId: agent2-text
+    elementType: text
+    bounds: [280, 140, 200, 40]
+    content:
+      fontSize: 13
+      color: "#1E3A5F"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Planning Agent</strong></p>
+  - elementId: agent3-bg
+    elementType: shape
+    bounds: [800, 140, 200, 40]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "#F1F5F9"
+    border:
+      style: solid
+      width: 1
+      color: "#3B82F6"
+  - elementId: agent3-text
+    elementType: text
+    bounds: [800, 140, 200, 40]
+    content:
+      fontSize: 13
+      color: "#1E3A5F"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>CAD Agent</strong></p>
+  - elementId: agent4-bg
+    elementType: shape
+    bounds: [1020, 140, 200, 40]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "#F1F5F9"
+    border:
+      style: solid
+      width: 1
+      color: "#3B82F6"
+  - elementId: agent4-text
+    elementType: text
+    bounds: [1020, 140, 200, 40]
+    content:
+      fontSize: 13
+      color: "#1E3A5F"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>BIM Agent</strong></p>
+  - elementId: agent5-bg
+    elementType: shape
+    bounds: [60, 370, 200, 40]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "#F1F5F9"
+    border:
+      style: solid
+      width: 1
+      color: "#3B82F6"
+  - elementId: agent5-text
+    elementType: text
+    bounds: [60, 370, 200, 40]
+    content:
+      fontSize: 13
+      color: "#1E3A5F"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Validation Agent</strong></p>
+  - elementId: agent6-bg
+    elementType: shape
+    bounds: [280, 370, 200, 40]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "#F1F5F9"
+    border:
+      style: solid
+      width: 1
+      color: "#3B82F6"
+  - elementId: agent6-text
+    elementType: text
+    bounds: [280, 370, 200, 40]
+    content:
+      fontSize: 13
+      color: "#1E3A5F"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Documentation Agent</strong></p>
+  - elementId: agent7-bg
+    elementType: shape
+    bounds: [800, 370, 200, 40]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "#F1F5F9"
+    border:
+      style: solid
+      width: 1
+      color: "#3B82F6"
+  - elementId: agent7-text
+    elementType: text
+    bounds: [800, 370, 200, 40]
+    content:
+      fontSize: 13
+      color: "#1E3A5F"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Simulation Agent</strong></p>
+  - elementId: agent8-bg
+    elementType: shape
+    bounds: [1020, 370, 200, 40]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "#F1F5F9"
+    border:
+      style: solid
+      width: 1
+      color: "#3B82F6"
+  - elementId: agent8-text
+    elementType: text
+    bounds: [1020, 370, 200, 40]
+    content:
+      fontSize: 13
+      color: "#1E3A5F"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Digital Twin Agent</strong></p>
+  - elementId: mcp-label
+    elementType: text
+    bounds: [440, 320, 400, 30]
+    content:
+      fontSize: 13
+      color: "#3B82F6"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>← Connected to MCP Layer →</strong></p>
+  - elementId: bottom-note
+    elementType: text
+    bounds: [60, 440, 1160, 40]
+    content:
+      fontSize: 14
+      color: "#64748B"
+      fontFamily: "Arial"
+      align: [center, middle]
+      text: |
+        <p>Each agent specializes in one domain. The Orchestrator coordinates them into seamless engineering workflows.</p>

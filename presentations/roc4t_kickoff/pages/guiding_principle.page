@@ -1,0 +1,96 @@
+pageType: content
+background:
+  type: solid
+  color: "#FFFFFF"
+elements:
+  - elementId: nav-label
+    elementType: text
+    bounds: [60, 24, 200, 22]
+    content:
+      style: "$caption"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>02 / Guiding Principle</p>
+  - elementId: heading
+    elementType: text
+    bounds: [60, 60, 700, 42]
+    content:
+      style: "$heading"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Guiding Principle</strong></p>
+  - elementId: accent-bar
+    elementType: shape
+    bounds: [60, 112, 80, 4]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: formula-card
+    elementType: shape
+    bounds: [60, 150, 1160, 100]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: formula-text
+    elementType: text
+    bounds: [80, 160, 1120, 80]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p>Business Need <span style="color:#3B82F6;">→</span> AI Orchestrator <span style="color:#3B82F6;">→</span> AutoCAD/Revit <span style="color:#3B82F6;">→</span> Quality Control <span style="color:#3B82F6;">→</span> Digital Twin Platform <span style="color:#3B82F6;">→</span> Decision <span style="color:#3B82F6;">→</span> New Version</p>
+  - elementId: principle-card
+    elementType: shape
+    bounds: [60, 280, 1160, 140]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill:
+      type: solid
+      color: "#F1F5F9"
+    border:
+      style: solid
+      width: 2
+      color: "#3B82F6"
+  - elementId: principle-quote
+    elementType: text
+    bounds: [100, 310, 1080, 50]
+    content:
+      fontSize: 28
+      color: "$text"
+      fontFamily: "Arial"
+      align: [center, middle]
+      text: |
+        <p><em>"AI prepares, humans decide, the lead visualizes and modifies."</em></p>
+  - elementId: explanation-title
+    elementType: text
+    bounds: [60, 460, 300, 30]
+    content:
+      fontSize: 18
+      color: "$accent"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>What this means</strong></p>
+  - elementId: explanation-body
+    elementType: text
+    bounds: [60, 500, 1160, 160]
+    content:
+      style: "$body"
+      align: [left, top]
+      text: |
+        <p>The AI is <strong>not a replacement</strong> for designers — it is a <span style="color:$text;">production accelerator</span> and <span style="color:$text;">quality standardizer</span>.</p>
+        <p style="margin-top:8px">The two designers become the <strong>business validators</strong> and <strong>supervisors</strong> of the AI system.</p>
+        <p style="margin-top:8px">The project lead can explore, understand, and request changes without ever opening AutoCAD or Revit.</p>

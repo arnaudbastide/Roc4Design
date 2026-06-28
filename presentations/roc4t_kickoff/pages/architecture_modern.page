@@ -1,0 +1,222 @@
+pageType: content
+background:
+  type: solid
+  color: "#FFFFFF"
+elements:
+  - elementId: nav-label
+    elementType: text
+    bounds: [60, 24, 300, 22]
+    content:
+      style: "$caption"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>05 / Enterprise Architecture</p>
+  - elementId: heading
+    elementType: text
+    bounds: [60, 60, 900, 42]
+    content:
+      style: "$heading"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Roc4Design Enterprise Architecture</strong></p>
+  - elementId: accent-bar
+    elementType: shape
+    bounds: [60, 112, 80, 4]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#3B82F6"
+  - elementId: top-layer
+    elementType: shape
+    bounds: [340, 150, 600, 50]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "#F1F5F9"
+    border:
+      style: solid
+      width: 1
+      color: "#E2E8F0"
+  - elementId: top-text
+    elementType: text
+    bounds: [340, 150, 600, 50]
+    content:
+      fontSize: 14
+      color: "#64748B"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Human Interfaces</strong> — Web · Desktop · Voice · VR · Teams · Mobile</p>
+  - elementId: arrow1
+    elementType: shape
+    bounds: [630, 200, 0, 30]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    border:
+      style: solid
+      width: 2
+      color: "#3B82F6"
+  - elementId: ai-layer
+    elementType: shape
+    bounds: [340, 230, 600, 50]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "#3B82F6"
+  - elementId: ai-text
+    elementType: text
+    bounds: [340, 230, 600, 50]
+    content:
+      fontSize: 15
+      color: "#FFFFFF"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>AI Orchestrator</strong></p>
+  - elementId: arrow2
+    elementType: shape
+    bounds: [630, 280, 0, 30]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    border:
+      style: solid
+      width: 2
+      color: "#3B82F6"
+  - elementId: knowledge-layer
+    elementType: shape
+    bounds: [340, 310, 600, 50]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "#1E3A5F"
+  - elementId: knowledge-text
+    elementType: text
+    bounds: [340, 310, 600, 50]
+    content:
+      fontSize: 15
+      color: "#FFFFFF"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Engineering Knowledge Platform</strong></p>
+  - elementId: arrow3
+    elementType: shape
+    bounds: [630, 360, 0, 30]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    border:
+      style: solid
+      width: 2
+      color: "#3B82F6"
+  - elementId: mcp-layer
+    elementType: shape
+    bounds: [340, 390, 600, 50]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "#3B82F6"
+  - elementId: mcp-text
+    elementType: text
+    bounds: [340, 390, 600, 50]
+    content:
+      fontSize: 15
+      color: "#FFFFFF"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>MCP Orchestration Layer</strong></p>
+  - elementId: arrow4
+    elementType: shape
+    bounds: [630, 440, 0, 30]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    border:
+      style: solid
+      width: 2
+      color: "#3B82F6"
+  - elementId: apps-layer
+    elementType: shape
+    bounds: [340, 470, 600, 80]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill:
+      type: solid
+      color: "#F1F5F9"
+    border:
+      style: solid
+      width: 1
+      color: "#E2E8F0"
+  - elementId: apps-text
+    elementType: text
+    bounds: [340, 470, 600, 80]
+    content:
+      fontSize: 14
+      color: "#64748B"
+      fontFamily: "Arial"
+      align: [center, middle]
+      lineHeight: 1.4
+      text: |
+        <p><strong>Engineering Applications</strong></p>
+        <p>AutoCAD · Revit · BIM · Digital Twin · ERP · PLM · Cloud</p>
+  - elementId: knowledge-panel
+    elementType: shape
+    bounds: [60, 310, 260, 240]
+    shapeName: roundRect
+    adjustments: [6000]
+    fill:
+      type: solid
+      color: "#F1F5F9"
+    border:
+      style: solid
+      width: 1
+      color: "#E2E8F0"
+  - elementId: knowledge-panel-title
+    elementType: text
+    bounds: [70, 320, 240, 24]
+    content:
+      fontSize: 13
+      color: "#3B82F6"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Knowledge Platform</strong></p>
+  - elementId: knowledge-panel-body
+    elementType: text
+    bounds: [70, 350, 240, 190]
+    content:
+      fontSize: 12
+      color: "#64748B"
+      fontFamily: "Arial"
+      lineHeight: 1.6
+      align: [left, top]
+      text: |
+        <p>• Company standards</p>
+        <p>• Templates</p>
+        <p>• Libraries</p>
+        <p>• Past projects</p>
+        <p>• Materials</p>
+        <p>• Regulations</p>
+        <p>• Engineering rules</p>
+  - elementId: bottom-sentence
+    elementType: text
+    bounds: [60, 580, 1160, 60]
+    content:
+      fontSize: 16
+      color: "#1E3A5F"
+      fontFamily: "Arial"
+      align: [center, middle]
+      lineHeight: 1.5
+      text: |
+        <p><strong>The AI never manipulates CAD directly.</strong></p>
+        <p><span style="color:#64748B;">It orchestrates engineering workflows through MCP.</span></p>

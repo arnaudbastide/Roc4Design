@@ -1,0 +1,147 @@
+pageType: cover
+background:
+  type: solid
+  color: "#FFFFFF"
+elements:
+  - elementId: top-accent-line
+    elementType: shape
+    bounds: [0, 0, 1280, 4]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#3B82F6"
+  - elementId: title
+    elementType: text
+    bounds: [140, 200, 1000, 100]
+    content:
+      style: "$title"
+      fontSize: 56
+      color: "#1E3A5F"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Roc4Design</strong></p>
+  - elementId: subtitle
+    elementType: text
+    bounds: [240, 310, 800, 40]
+    content:
+      style: "$subtitle"
+      fontSize: 24
+      color: "#64748B"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>AI-Native Engineering Platform</strong></p>
+  - elementId: mcp-line
+    elementType: text
+    bounds: [340, 355, 600, 30]
+    content:
+      fontSize: 16
+      color: "#3B82F6"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p>Powered by the Model Context Protocol (MCP)</p>
+  - elementId: divider
+    elementType: shape
+    bounds: [540, 400, 200, 3]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#3B82F6"
+  - elementId: blueprint-city
+    elementType: shape
+    bounds: [440, 420, 400, 200]
+    shapeName: roundRect
+    adjustments: [4000]
+    fill:
+      type: gradient
+      gradientType: linear
+      angle: 135
+      stops:
+        - {position: 0, color: "#F1F5F9"}
+        - {position: 1, color: "#E2E8F0"}
+    border:
+      style: solid
+      width: 1
+      color: "#E2E8F0"
+  - elementId: blueprint-icon1
+    elementType: icon
+    bounds: [480, 450, 40, 40]
+    iconName: "fas:building"
+    fill:
+      type: solid
+      color: "#3B82F6"
+  - elementId: blueprint-icon2
+    elementType: icon
+    bounds: [560, 450, 40, 40]
+    iconName: "fas:cubes"
+    fill:
+      type: solid
+      color: "#1E3A5F"
+  - elementId: blueprint-icon3
+    elementType: icon
+    bounds: [640, 450, 40, 40]
+    iconName: "fas:drafting-compass"
+    fill:
+      type: solid
+      color: "#3B82F6"
+  - elementId: blueprint-icon4
+    elementType: icon
+    bounds: [720, 450, 40, 40]
+    iconName: "fas:robot"
+    fill:
+      type: solid
+      color: "#1E3A5F"
+  - elementId: network-line1
+    elementType: shape
+    bounds: [500, 490, 240, 0]
+    shapeName: straightConnector1
+    border:
+      style: solid
+      width: 1
+      color: "#3B82F6"
+  - elementId: network-dot1
+    elementType: shape
+    bounds: [490, 488, 4, 4]
+    shapeName: ellipse
+    fill:
+      type: solid
+      color: "#3B82F6"
+  - elementId: network-dot2
+    elementType: shape
+    bounds: [750, 488, 4, 4]
+    shapeName: ellipse
+    fill:
+      type: solid
+      color: "#3B82F6"
+  - elementId: tagline
+    elementType: text
+    bounds: [140, 620, 1000, 40]
+    content:
+      fontSize: 18
+      color: "#1E3A5F"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><em>We don't automate CAD. We orchestrate engineering intelligence.</em></p>
+  - elementId: confidential
+    elementType: text
+    bounds: [440, 665, 400, 30]
+    content:
+      style: "$caption"
+      fontSize: 12
+      color: "#94A3B8"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p>Confidential — Internal Use Only</p>
+  - elementId: bottom-accent-line
+    elementType: shape
+    bounds: [0, 716, 1280, 4]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#3B82F6"

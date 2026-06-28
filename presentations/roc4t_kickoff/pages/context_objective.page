@@ -1,0 +1,167 @@
+pageType: content
+background:
+  type: solid
+  color: "$primary"
+elements:
+  - elementId: nav-label
+    elementType: text
+    bounds: [60, 24, 200, 22]
+    content:
+      style: "$caption"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>01 / Context &amp; Objective</p>
+  - elementId: heading
+    elementType: text
+    bounds: [60, 60, 700, 42]
+    content:
+      style: "$heading"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Context &amp; Objective</strong></p>
+  - elementId: accent-bar
+    elementType: shape
+    bounds: [60, 112, 80, 4]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: context-card
+    elementType: shape
+    bounds: [60, 140, 540, 200]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: context-title
+    elementType: text
+    bounds: [80, 152, 500, 28]
+    content:
+      fontSize: 16
+      color: "$accent"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Context</strong></p>
+  - elementId: context-body
+    elementType: text
+    bounds: [80, 186, 500, 150]
+    content:
+      style: "$body"
+      align: [left, top]
+      text: |
+        <p>Roc4t has recruited two remote designers for AutoCAD and 3D work.</p>
+        <p style="margin-top:8px">In parallel, we want to build an AI agent capable of performing the same tasks — <span style="color:$text;"><strong>better and faster</strong></span>.</p>
+  - elementId: objective-card
+    elementType: shape
+    bounds: [60, 350, 540, 270]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: objective-title
+    elementType: text
+    bounds: [80, 362, 500, 28]
+    content:
+      fontSize: 16
+      color: "$accent"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Objective</strong></p>
+  - elementId: objective-body
+    elementType: text
+    bounds: [80, 398, 500, 210]
+    content:
+      style: "$body"
+      align: [left, top]
+      text: |
+        <p>Build a unified production chain around:</p>
+        <p style="margin-top:6px"><span style="color:$text;"><strong>AutoCAD</strong></span> + <span style="color:$text;"><strong>Revit/BIM</strong></span> + <span style="color:$text;"><strong>AI Agents</strong></span> + <span style="color:$text;"><strong>3D Immersive Review</strong></span></p>
+        <p style="margin-top:12px">To produce faster with standardized outputs, reduce manual errors, and enable the lead to visualize and modify without touching technical tools.</p>
+  - elementId: icon-autocad
+    elementType: icon
+    bounds: [700, 160, 48, 48]
+    iconName: "fas:drafting-compass"
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: icon-bim
+    elementType: icon
+    bounds: [700, 280, 48, 48]
+    iconName: "fas:building"
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: icon-ai
+    elementType: icon
+    bounds: [700, 400, 48, 48]
+    iconName: "fas:robot"
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: icon-3d
+    elementType: icon
+    bounds: [700, 520, 48, 48]
+    iconName: "fas:cube"
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: label-autocad
+    elementType: text
+    bounds: [764, 164, 300, 40]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>AutoCAD</p>
+  - elementId: label-bim
+    elementType: text
+    bounds: [764, 284, 300, 40]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>Revit / BIM</p>
+  - elementId: label-ai
+    elementType: text
+    bounds: [764, 404, 300, 40]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>AI Agents</p>
+  - elementId: label-3d
+    elementType: text
+    bounds: [764, 524, 300, 40]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>3D Immersive Review</p>

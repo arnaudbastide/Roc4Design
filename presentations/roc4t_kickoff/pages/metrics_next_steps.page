@@ -1,0 +1,146 @@
+pageType: content
+background:
+  type: solid
+  color: "#FFFFFF"
+elements:
+  - elementId: nav-label
+    elementType: text
+    bounds: [60, 24, 250, 22]
+    content:
+      style: "$caption"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>10 / Metrics &amp; Next Steps</p>
+  - elementId: heading
+    elementType: text
+    bounds: [60, 60, 700, 42]
+    content:
+      style: "$heading"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Success Metrics &amp; Next Steps</strong></p>
+  - elementId: accent-bar
+    elementType: shape
+    bounds: [60, 112, 80, 4]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: metrics-title
+    elementType: text
+    bounds: [60, 140, 300, 28]
+    content:
+      fontSize: 16
+      color: "$accent"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Success Metrics</strong></p>
+  - elementId: metrics-table
+    elementType: table
+    bounds: [60, 176, 560, 260]
+    columnWidths: [0.55, 0.45]
+    rowHeights: [0.16, 0.168, 0.168, 0.168, 0.168, 0.168]
+    style: "$default"
+    rows:
+      - - content:
+            text: |
+              <p><strong>Indicator</strong></p>
+        - content:
+            text: |
+              <p><strong>Target</strong></p>
+      - - content:
+            text: |
+              <p>Time saved per plan / model</p>
+        - content:
+            text: |
+              <p>Measurable reduction</p>
+      - - content:
+            text: |
+              <p>Manual corrections needed</p>
+        - content:
+            text: |
+              <p>Decrease</p>
+      - - content:
+            text: |
+              <p>Errors detected before delivery</p>
+        - content:
+            text: |
+              <p>Increase</p>
+      - - content:
+            text: |
+              <p>Variant generation speed</p>
+        - content:
+            text: |
+              <p>Faster</p>
+      - - content:
+            text: |
+              <p>Lead validation time</p>
+        - content:
+            text: |
+              <p>Shorter</p>
+  - elementId: next-steps-title
+    elementType: text
+    bounds: [660, 140, 300, 28]
+    content:
+      fontSize: 16
+      color: "$accent"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Next Steps</strong></p>
+  - elementId: next-steps-card
+    elementType: shape
+    bounds: [660, 176, 560, 260]
+    shapeName: roundRect
+    adjustments: [6000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: next-steps-body
+    elementType: text
+    bounds: [680, 192, 520, 228]
+    content:
+      fontSize: 15
+      color: "$textMuted"
+      fontFamily: "Arial"
+      lineHeight: 1.5
+      align: [left, top]
+      text: |
+        <p><span style="color:$accent;">1.</span> Validate this framing document with stakeholders</p>
+        <p><span style="color:$accent;">2.</span> Select the first use case (e.g., standardized 2D layout plans)</p>
+        <p><span style="color:$accent;">3.</span> Assign the business and technical leads</p>
+        <p><span style="color:$accent;">4.</span> Begin Week 1 activities (standards inventory, scope definition)</p>
+        <p><span style="color:$accent;">5.</span> Schedule Day 30 demo to decide continuation</p>
+  - elementId: decision-card
+    elementType: shape
+    bounds: [60, 470, 1160, 140]
+    shapeName: roundRect
+    adjustments: [6000]
+    fill:
+      type: solid
+      color: "#F1F5F9"
+    border:
+      style: solid
+      width: 2
+      color: "#3B82F6"
+  - elementId: decision-text
+    elementType: text
+    bounds: [100, 490, 1080, 100]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Arial"
+      lineHeight: 1.5
+      align: [center, middle]
+      text: |
+        <p>Day 30 Decision: <span style="color:$accent;"><strong>Go</strong></span> / <span style="color:$accent;"><strong>No-go</strong></span> / <span style="color:$accent;"><strong>Adjust</strong></span></p>
+        <p><span style="font-size:15px; color:$textMuted;">Based on demonstrable results from the 30-day prototype cycle.</span></p>

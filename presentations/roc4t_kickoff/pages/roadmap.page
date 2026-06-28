@@ -1,0 +1,252 @@
+pageType: content
+background:
+  type: solid
+  color: "#FFFFFF"
+elements:
+  - elementId: nav-label
+    elementType: text
+    bounds: [60, 24, 200, 22]
+    content:
+      style: "$caption"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>07 / 30-Day Roadmap</p>
+  - elementId: heading
+    elementType: text
+    bounds: [60, 60, 700, 42]
+    content:
+      style: "$heading"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>30-Day Roadmap</strong></p>
+  - elementId: accent-bar
+    elementType: shape
+    bounds: [60, 112, 80, 4]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: phase1-bar
+    elementType: shape
+    bounds: [60, 150, 10, 160]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: phase1-card
+    elementType: shape
+    bounds: [80, 150, 540, 160]
+    shapeName: roundRect
+    adjustments: [6000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: phase1-badge
+    elementType: text
+    bounds: [100, 162, 200, 22]
+    content:
+      fontSize: 12
+      color: "$accent"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>WEEKS 1-2</strong></p>
+  - elementId: phase1-title
+    elementType: text
+    bounds: [100, 188, 500, 26]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Phase 1 — AutoCAD POC</strong></p>
+  - elementId: phase1-body
+    elementType: text
+    bounds: [100, 220, 500, 80]
+    content:
+      fontSize: 14
+      color: "$textMuted"
+      fontFamily: "Arial"
+      lineHeight: 1.5
+      align: [left, top]
+      text: |
+        <p>Quick productivity gain on a narrow, well-defined use case.</p>
+        <p>Select one recurring task, establish simple rules, keep human validation in the loop.</p>
+  - elementId: phase2-bar
+    elementType: shape
+    bounds: [660, 150, 10, 160]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: phase2-card
+    elementType: shape
+    bounds: [680, 150, 540, 160]
+    shapeName: roundRect
+    adjustments: [6000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: phase2-badge
+    elementType: text
+    bounds: [700, 162, 200, 22]
+    content:
+      fontSize: 12
+      color: "$accent"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>WEEKS 3-4</strong></p>
+  - elementId: phase2-title
+    elementType: text
+    bounds: [700, 188, 500, 26]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Phase 2 — BIM / Revit Extension</strong></p>
+  - elementId: phase2-body
+    elementType: text
+    bounds: [700, 220, 500, 80]
+    content:
+      fontSize: 14
+      color: "$textMuted"
+      fontFamily: "Arial"
+      lineHeight: 1.5
+      align: [left, top]
+      text: |
+        <p>Move from drawing automation to intelligent design automation.</p>
+        <p>Define BIM structure, test AI-driven modifications, verify 2D/BIM consistency.</p>
+  - elementId: phase3-bar
+    elementType: shape
+    bounds: [60, 340, 10, 160]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: phase3-card
+    elementType: shape
+    bounds: [80, 340, 540, 160]
+    shapeName: roundRect
+    adjustments: [6000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: phase3-badge
+    elementType: text
+    bounds: [100, 352, 200, 22]
+    content:
+      fontSize: 12
+      color: "$accent"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>WEEK 4+</strong></p>
+  - elementId: phase3-title
+    elementType: text
+    bounds: [100, 378, 500, 26]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Phase 3 — Digital Twin Platform</strong></p>
+  - elementId: phase3-body
+    elementType: text
+    bounds: [100, 410, 500, 80]
+    content:
+      fontSize: 14
+      color: "$textMuted"
+      fontFamily: "Arial"
+      lineHeight: 1.5
+      align: [left, top]
+      text: |
+        <p>Make the project readable for the lead.</p>
+        <p>Prepare Digital Twin environment, test navigation, simulate modification requests, verify loop closure.</p>
+  - elementId: phase4-bar
+    elementType: shape
+    bounds: [660, 340, 10, 160]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: phase4-card
+    elementType: shape
+    bounds: [680, 340, 540, 160]
+    shapeName: roundRect
+    adjustments: [6000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: phase4-badge
+    elementType: text
+    bounds: [700, 352, 200, 22]
+    content:
+      fontSize: 12
+      color: "$accent"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>MONTH 2+</strong></p>
+  - elementId: phase4-title
+    elementType: text
+    bounds: [700, 378, 500, 26]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Phase 4 — Industrialization</strong></p>
+  - elementId: phase4-body
+    elementType: text
+    bounds: [700, 410, 500, 80]
+    content:
+      fontSize: 14
+      color: "$textMuted"
+      fontFamily: "Arial"
+      lineHeight: 1.5
+      align: [left, top]
+      text: |
+        <p>Document all standards, implement automated quality controls, add logging and audit trails.</p>
+        <p>Create reusable libraries and stabilize the full loop.</p>
+  - elementId: bottom-note
+    elementType: text
+    bounds: [60, 540, 1160, 30]
+    content:
+      fontSize: 15
+      color: "$textMuted"
+      fontFamily: "Arial"
+      align: [left, middle]
+      text: |
+        <p><span style="color:$accent;">▸</span> Day 30: Go / No-go / Adjust decision based on demonstrable results.</p>

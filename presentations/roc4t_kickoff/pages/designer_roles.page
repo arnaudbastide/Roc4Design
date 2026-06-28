@@ -1,0 +1,218 @@
+pageType: content
+background:
+  type: solid
+  color: "#FFFFFF"
+elements:
+  - elementId: nav-label
+    elementType: text
+    bounds: [60, 24, 250, 22]
+    content:
+      style: "$caption"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>08 / Designer Roles</p>
+  - elementId: heading
+    elementType: text
+    bounds: [60, 60, 700, 42]
+    content:
+      style: "$heading"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Role of the Two Designers</strong></p>
+  - elementId: accent-bar
+    elementType: shape
+    bounds: [60, 112, 80, 4]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: phase1-card
+    elementType: shape
+    bounds: [60, 140, 370, 280]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: phase1-num
+    elementType: shape
+    bounds: [80, 158, 50, 50]
+    shapeName: ellipse
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: phase1-num-text
+    elementType: text
+    bounds: [80, 158, 50, 50]
+    content:
+      fontSize: 20
+      color: "$primary"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>1</strong></p>
+  - elementId: phase1-title
+    elementType: text
+    bounds: [140, 164, 270, 38]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Reference Production</strong></p>
+  - elementId: phase1-body
+    elementType: text
+    bounds: [80, 224, 330, 180]
+    content:
+      fontSize: 14
+      color: "$textMuted"
+      fontFamily: "Arial"
+      lineHeight: 1.5
+      align: [left, top]
+      text: |
+        <p>• Produce manually</p>
+        <p>• Serve as operational reference</p>
+        <p>• Capture best practices</p>
+        <p>• Document frequent errors and edge cases</p>
+        <p>• Record business rules</p>
+  - elementId: phase2-card
+    elementType: shape
+    bounds: [455, 140, 370, 280]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: phase2-num
+    elementType: shape
+    bounds: [475, 158, 50, 50]
+    shapeName: ellipse
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: phase2-num-text
+    elementType: text
+    bounds: [475, 158, 50, 50]
+    content:
+      fontSize: 20
+      color: "$primary"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>2</strong></p>
+  - elementId: phase2-title
+    elementType: text
+    bounds: [535, 164, 270, 38]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Assisted Production</strong></p>
+  - elementId: phase2-body
+    elementType: text
+    bounds: [475, 224, 330, 180]
+    content:
+      fontSize: 14
+      color: "$textMuted"
+      fontFamily: "Arial"
+      lineHeight: 1.5
+      align: [left, top]
+      text: |
+        <p>• Become operators of AI-assisted production</p>
+        <p>• Validate AI outputs</p>
+        <p>• Correct ambiguous cases</p>
+        <p>• Provide feedback on errors</p>
+  - elementId: phase3-card
+    elementType: shape
+    bounds: [850, 140, 370, 280]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: phase3-num
+    elementType: shape
+    bounds: [870, 158, 50, 50]
+    shapeName: ellipse
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: phase3-num-text
+    elementType: text
+    bounds: [870, 158, 50, 50]
+    content:
+      fontSize: 20
+      color: "$primary"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>3</strong></p>
+  - elementId: phase3-title
+    elementType: text
+    bounds: [930, 164, 270, 38]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Supervision</strong></p>
+  - elementId: phase3-body
+    elementType: text
+    bounds: [870, 224, 330, 180]
+    content:
+      fontSize: 14
+      color: "$textMuted"
+      fontFamily: "Arial"
+      lineHeight: 1.5
+      align: [left, top]
+      text: |
+        <p>• Evolve into business supervisors</p>
+        <p>• Formalize know-how into rules</p>
+        <p>• Own quality and standards</p>
+        <p>• Shape the AI's behavior</p>
+  - elementId: insight-card
+    elementType: shape
+    bounds: [60, 450, 1160, 100]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill:
+      type: solid
+      color: "#F1F5F9"
+    border:
+      style: solid
+      width: 2
+      color: "#3B82F6"
+  - elementId: insight-text
+    elementType: text
+    bounds: [100, 470, 1080, 60]
+    content:
+      fontSize: 20
+      color: "$text"
+      fontFamily: "Arial"
+      align: [center, middle]
+      text: |
+        <p><em>"The AI must learn the Roc4Design method, not invent its own."</em></p>

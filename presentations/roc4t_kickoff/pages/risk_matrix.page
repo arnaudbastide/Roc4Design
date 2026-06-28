@@ -1,0 +1,139 @@
+pageType: content
+background:
+  type: solid
+  color: "#FFFFFF"
+elements:
+  - elementId: nav-label
+    elementType: text
+    bounds: [60, 24, 200, 22]
+    content:
+      style: "$caption"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>09 / Risk Matrix</p>
+  - elementId: heading
+    elementType: text
+    bounds: [60, 60, 700, 42]
+    content:
+      style: "$heading"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Risk Matrix — Top 5 Risks</strong></p>
+  - elementId: accent-bar
+    elementType: shape
+    bounds: [60, 112, 80, 4]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: risk-table
+    elementType: table
+    bounds: [60, 140, 1160, 420]
+    columnWidths: [0.30, 0.12, 0.12, 0.23, 0.23]
+    rowHeights: [0.12, 0.176, 0.176, 0.176, 0.176, 0.176]
+    style: "$default"
+    rows:
+      - - content:
+            text: |
+              <p><strong>Risk</strong></p>
+        - content:
+            text: |
+              <p><strong>Impact</strong></p>
+        - content:
+            text: |
+              <p><strong>Prob.</strong></p>
+        - content:
+            text: |
+              <p><strong>Preventive Action</strong></p>
+        - content:
+            text: |
+              <p><strong>Corrective Action</strong></p>
+      - - content:
+            text: |
+              <p>Scope too broad from start</p>
+        - content:
+            text: |
+              <p><span style="color:#EF4444;"><strong>High</strong></span></p>
+        - content:
+            text: |
+              <p><span style="color:#EF4444;"><strong>High</strong></span></p>
+        - content:
+            text: |
+              <p>Choose one simple use case</p>
+        - content:
+            text: |
+              <p>Immediately reduce scope</p>
+      - - content:
+            text: |
+              <p>Standards poorly defined</p>
+        - content:
+            text: |
+              <p><span style="color:#EF4444;"><strong>High</strong></span></p>
+        - content:
+            text: |
+              <p><span style="color:#EF4444;"><strong>High</strong></span></p>
+        - content:
+            text: |
+              <p>Document templates, layers, naming before automation</p>
+        - content:
+            text: |
+              <p>Block automation until clarified</p>
+      - - content:
+            text: |
+              <p>AutoCAD/Revit linkage complicated</p>
+        - content:
+            text: |
+              <p><span style="color:#EF4444;"><strong>High</strong></span></p>
+        - content:
+            text: |
+              <p><span style="color:#F59E0B;"><strong>Medium</strong></span></p>
+        - content:
+            text: |
+              <p>Validate each step separately</p>
+        - content:
+            text: |
+              <p>Isolate interfaces and simplify</p>
+      - - content:
+            text: |
+              <p>Too little human validation</p>
+        - content:
+            text: |
+              <p><span style="color:#EF4444;"><strong>High</strong></span></p>
+        - content:
+            text: |
+              <p><span style="color:#F59E0B;"><strong>Medium</strong></span></p>
+        - content:
+            text: |
+              <p>Keep mandatory control workflow</p>
+        - content:
+            text: |
+              <p>Add mandatory review step</p>
+      - - content:
+            text: |
+              <p>Insufficient file security</p>
+        - content:
+            text: |
+              <p><span style="color:#EF4444;"><strong>High</strong></span></p>
+        - content:
+            text: |
+              <p><span style="color:#F59E0B;"><strong>Medium</strong></span></p>
+        - content:
+            text: |
+              <p>Limit access and log actions</p>
+        - content:
+            text: |
+              <p>Immediately restrict permissions</p>
+  - elementId: critical-factors
+    elementType: text
+    bounds: [60, 590, 1160, 80]
+    content:
+      fontSize: 15
+      color: "$textMuted"
+      fontFamily: "Arial"
+      lineHeight: 1.5
+      align: [left, top]
+      text: |
+        <p><span style="color:$accent;"><strong>Critical Success Factors:</strong></span></p>
+        <p>1. Scope framing — narrow and well-defined  |  2. Standards definition — written before automation  |  3. Human validation — kept at every critical step</p>

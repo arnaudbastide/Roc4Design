@@ -1,0 +1,209 @@
+pageType: content
+background:
+  type: solid
+  color: "$primary"
+elements:
+  - elementId: nav-label
+    elementType: text
+    bounds: [60, 24, 250, 22]
+    content:
+      style: "$caption"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>03 / Target Architecture</p>
+  - elementId: heading
+    elementType: text
+    bounds: [60, 60, 700, 42]
+    content:
+      style: "$heading"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Target Architecture — 5 Layers</strong></p>
+  - elementId: accent-bar
+    elementType: shape
+    bounds: [60, 112, 80, 4]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: layer5-box
+    elementType: shape
+    bounds: [340, 150, 600, 80]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: layer5-text
+    elementType: text
+    bounds: [340, 150, 600, 80]
+    content:
+      fontSize: 18
+      color: "$primary"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Layer 5 — AI Orchestrator Agent</strong></p>
+  - elementId: arrow5
+    elementType: shape
+    bounds: [630, 230, 0, 30]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    border:
+      style: solid
+      width: 2
+      color: "$accent"
+  - elementId: layer4-box
+    elementType: shape
+    bounds: [340, 260, 600, 80]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 2
+      color: "$accent"
+  - elementId: layer4-text
+    elementType: text
+    bounds: [340, 260, 600, 80]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Layer 4 — Digital Twin Platform</strong></p>
+  - elementId: arrow4
+    elementType: shape
+    bounds: [630, 340, 0, 30]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    border:
+      style: solid
+      width: 2
+      color: "$accent"
+  - elementId: layer3-box
+    elementType: shape
+    bounds: [340, 370, 600, 80]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 2
+      color: "$accent"
+  - elementId: layer3-text
+    elementType: text
+    bounds: [340, 370, 600, 80]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Layer 3 — MCP (Model Context Protocol)</strong></p>
+  - elementId: arrow3
+    elementType: shape
+    bounds: [630, 450, 0, 30]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    border:
+      style: solid
+      width: 2
+      color: "$accent"
+  - elementId: layer2-box
+    elementType: shape
+    bounds: [340, 480, 600, 80]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 2
+      color: "$accent"
+  - elementId: layer2-text
+    elementType: text
+    bounds: [340, 480, 600, 80]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Layer 2 — Revit / BIM (Structured Model)</strong></p>
+  - elementId: arrow2
+    elementType: shape
+    bounds: [630, 560, 0, 30]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    border:
+      style: solid
+      width: 2
+      color: "$accent"
+  - elementId: layer1-box
+    elementType: shape
+    bounds: [340, 590, 600, 80]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 2
+      color: "$accent"
+  - elementId: layer1-text
+    elementType: text
+    bounds: [340, 590, 600, 80]
+    content:
+      fontSize: 18
+      color: "$text"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Layer 1 — AutoCAD (2D Production)</strong></p>
+  - elementId: desc-left
+    elementType: text
+    bounds: [60, 260, 260, 400]
+    content:
+      fontSize: 14
+      color: "$textMuted"
+      fontFamily: "Arial"
+      lineHeight: 1.6
+      align: [left, top]
+      text: |
+        <p><strong style="color:$text;">Foundation</strong></p>
+        <p>2D plans, technical details, execution drawings</p>
+        <p style="margin-top:12px"><strong style="color:$text;">Intelligence</strong></p>
+        <p>BIM objects, walls, doors, windows, schedules</p>
+        <p style="margin-top:12px"><strong style="color:$text;">Bridge</strong></p>
+        <p>AI-to-software connection via MCP</p>
+  - elementId: desc-right
+    elementType: text
+    bounds: [960, 200, 260, 400]
+    content:
+      fontSize: 14
+      color: "$textMuted"
+      fontFamily: "Arial"
+      lineHeight: 1.6
+      align: [left, top]
+      text: |
+        <p><strong style="color:$text;">Experience</strong></p>
+        <p>Digital Twin Platform</p>
+        <p style="margin-top:12px"><strong style="color:$text;">Brain</strong></p>
+        <p>AI Orchestrator: Planner → Generator → Verifier</p>
+        <p style="margin-top:12px"><span style="color:$accent;">▲</span> Control flows upward</p>
+        <p><span style="color:$accent;">▼</span> Data flows downward</p>

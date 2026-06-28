@@ -1,0 +1,110 @@
+pageType: final
+background:
+  type: solid
+  color: "#0F172A"
+elements:
+  - elementId: accent-bar-top
+    elementType: shape
+    bounds: [0, 0, 1280, 6]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: title
+    elementType: text
+    bounds: [140, 180, 1000, 80]
+    content:
+      fontSize: 44
+      color: "#F8FAFC"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Ready for Execution</strong></p>
+  - elementId: divider
+    elementType: shape
+    bounds: [540, 280, 200, 3]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: factors-title
+    elementType: text
+    bounds: [240, 310, 800, 30]
+    content:
+      fontSize: 18
+      color: "$accent"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Critical Success Factors</strong></p>
+  - elementId: factor1
+    elementType: text
+    bounds: [240, 360, 800, 30]
+    content:
+      fontSize: 16
+      color: "#F8FAFC"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p>1. Scope framing — narrow and well-defined</p>
+  - elementId: factor2
+    elementType: text
+    bounds: [240, 400, 800, 30]
+    content:
+      fontSize: 16
+      color: "#F8FAFC"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p>2. Standards definition — written before automation</p>
+  - elementId: factor3
+    elementType: text
+    bounds: [240, 440, 800, 30]
+    content:
+      fontSize: 16
+      color: "#F8FAFC"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p>3. Human validation — kept at every critical step</p>
+  - elementId: divider2
+    elementType: shape
+    bounds: [540, 500, 200, 3]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: questions
+    elementType: text
+    bounds: [340, 530, 600, 40]
+    content:
+      fontSize: 22
+      color: "$textMuted"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><em>Questions?</em></p>
+  - elementId: footer
+    elementType: text
+    bounds: [340, 600, 600, 30]
+    content:
+      fontSize: 14
+      color: "$textMuted"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p>Confidential — Internal Use Only</p>
+  - elementId: accent-bar-bottom
+    elementType: shape
+    bounds: [0, 714, 1280, 6]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"

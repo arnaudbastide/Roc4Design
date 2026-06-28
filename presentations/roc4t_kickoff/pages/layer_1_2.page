@@ -1,0 +1,147 @@
+pageType: content
+background:
+  type: solid
+  color: "#FFFFFF"
+elements:
+  - elementId: nav-label
+    elementType: text
+    bounds: [60, 24, 250, 22]
+    content:
+      style: "$caption"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>04 / Layer 1 &amp; 2</p>
+  - elementId: heading
+    elementType: text
+    bounds: [60, 60, 700, 42]
+    content:
+      style: "$heading"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Layer 1 &amp; 2: AutoCAD + Revit/BIM</strong></p>
+  - elementId: accent-bar
+    elementType: shape
+    bounds: [60, 112, 80, 4]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: autocad-card
+    elementType: shape
+    bounds: [60, 140, 560, 280]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: autocad-badge
+    elementType: shape
+    bounds: [80, 158, 120, 26]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: autocad-badge-text
+    elementType: text
+    bounds: [80, 158, 120, 26]
+    content:
+      fontSize: 12
+      color: "$primary"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>LAYER 1</strong></p>
+  - elementId: autocad-title
+    elementType: text
+    bounds: [80, 194, 520, 30]
+    content:
+      fontSize: 20
+      color: "$text"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>AutoCAD (2D Production)</strong></p>
+  - elementId: autocad-body
+    elementType: text
+    bounds: [80, 234, 520, 170]
+    content:
+      style: "$body"
+      fontSize: 16
+      align: [left, top]
+      text: |
+        <p>• Plans 2D, technical details, quick variants, execution drawings</p>
+        <p style="margin-top:6px">• <strong>Why start here:</strong> Tasks are easier to frame (layers, simple geometry, dimensions, PDF/DWG exports)</p>
+        <p style="margin-top:6px">• <strong>AI Scope:</strong> Generate drawing structures, manage layers, apply Roc4Design standards, produce exports</p>
+  - elementId: revit-card
+    elementType: shape
+    bounds: [660, 140, 560, 280]
+    shapeName: roundRect
+    adjustments: [8000]
+    fill:
+      type: solid
+      color: "$surface"
+    border:
+      style: solid
+      width: 1
+      color: "$border"
+  - elementId: revit-badge
+    elementType: shape
+    bounds: [680, 158, 120, 26]
+    shapeName: roundRect
+    adjustments: [12000]
+    fill:
+      type: solid
+      color: "$accent"
+  - elementId: revit-badge-text
+    elementType: text
+    bounds: [680, 158, 120, 26]
+    content:
+      fontSize: 12
+      color: "$primary"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>LAYER 2</strong></p>
+  - elementId: revit-title
+    elementType: text
+    bounds: [680, 194, 520, 30]
+    content:
+      fontSize: 20
+      color: "$text"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Revit / BIM (Structured Model)</strong></p>
+  - elementId: revit-body
+    elementType: text
+    bounds: [680, 234, 520, 170]
+    content:
+      style: "$body"
+      fontSize: 16
+      align: [left, top]
+      text: |
+        <p>• Central BIM layer for intelligent project objects</p>
+        <p style="margin-top:6px">• <strong>Objects:</strong> Walls, doors, windows, levels, rooms, equipment, schedules, coordination views</p>
+        <p style="margin-top:6px">• <strong>AI Scope:</strong> Create, modify, and verify BIM elements more intelligently than in 2D</p>
+  - elementId: bottom-note
+    elementType: text
+    bounds: [60, 440, 1160, 60]
+    content:
+      fontSize: 16
+      color: "$textMuted"
+      fontFamily: "Arial"
+      align: [left, middle]
+      text: |
+        <p><span style="color:$accent;">▸</span> We start with AutoCAD because it offers the fastest path to measurable productivity gains.</p>
+        <p><span style="color:$accent;">▸</span> Revit/BIM is the strategic next step once 2D automation is proven.</p>

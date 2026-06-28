@@ -1,0 +1,180 @@
+pageType: content
+background:
+  type: solid
+  color: "#FFFFFF"
+elements:
+  - elementId: nav-label
+    elementType: text
+    bounds: [60, 24, 400, 22]
+    content:
+      style: "$caption"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>02 / Why MCP Changes Engineering</p>
+  - elementId: heading
+    elementType: text
+    bounds: [60, 60, 900, 42]
+    content:
+      style: "$heading"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Why the Model Context Protocol Changes Engineering</strong></p>
+  - elementId: accent-bar
+    elementType: shape
+    bounds: [60, 112, 80, 4]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#3B82F6"
+  - elementId: left-bg
+    elementType: shape
+    bounds: [60, 140, 540, 460]
+    shapeName: roundRect
+    adjustments: [4000]
+    fill:
+      type: solid
+      color: "#F1F5F9"
+    border:
+      style: solid
+      width: 1
+      color: "#E2E8F0"
+  - elementId: left-title
+    elementType: text
+    bounds: [80, 156, 500, 32]
+    content:
+      fontSize: 18
+      color: "#1E293B"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Traditional Integrations</strong></p>
+  - elementId: left-divider
+    elementType: shape
+    bounds: [80, 194, 80, 3]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#EF4444"
+  - elementId: left-flow
+    elementType: text
+    bounds: [80, 210, 500, 350]
+    content:
+      fontSize: 14
+      color: "#64748B"
+      fontFamily: "Arial"
+      lineHeight: 1.5
+      align: [left, top]
+      text: |
+        <p><span style="color:#1E293B;"><strong>AI</strong></span></p>
+        <p><span style="color:#EF4444;">↓</span></p>
+        <p>Custom API</p>
+        <p><span style="color:#EF4444;">↓</span></p>
+        <p><span style="color:#1E293B;"><strong>AutoCAD</strong></span></p>
+        <p style="margin-top:12px"><span style="color:#1E293B;"><strong>AI</strong></span></p>
+        <p><span style="color:#EF4444;">↓</span></p>
+        <p>Custom API</p>
+        <p><span style="color:#EF4444;">↓</span></p>
+        <p><span style="color:#1E293B;"><strong>Revit</strong></span></p>
+        <p style="margin-top:12px"><span style="color:#1E293B;"><strong>AI</strong></span></p>
+        <p><span style="color:#EF4444;">↓</span></p>
+        <p>Custom API</p>
+        <p><span style="color:#EF4444;">↓</span></p>
+        <p><span style="color:#1E293B;"><strong>ERP</strong></span></p>
+  - elementId: left-summary
+    elementType: text
+    bounds: [80, 570, 500, 26]
+    content:
+      fontSize: 14
+      color: "#EF4444"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Many custom integrations</strong></p>
+  - elementId: arrow-center
+    elementType: shape
+    bounds: [620, 280, 40, 0]
+    shapeName: straightConnector1
+    arrow: [null, "arrow"]
+    border:
+      style: solid
+      width: 2
+      color: "#3B82F6"
+  - elementId: right-bg
+    elementType: shape
+    bounds: [680, 140, 540, 460]
+    shapeName: roundRect
+    adjustments: [4000]
+    fill:
+      type: solid
+      color: "#1E3A5F"
+    border:
+      style: solid
+      width: 1
+      color: "#1E3A5F"
+  - elementId: right-title
+    elementType: text
+    bounds: [700, 156, 500, 32]
+    content:
+      fontSize: 18
+      color: "#FFFFFF"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>MCP</strong></p>
+  - elementId: right-divider
+    elementType: shape
+    bounds: [700, 194, 80, 3]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#3B82F6"
+  - elementId: right-flow
+    elementType: text
+    bounds: [700, 210, 500, 350]
+    content:
+      fontSize: 14
+      color: "#94A3B8"
+      fontFamily: "Arial"
+      lineHeight: 1.5
+      align: [left, top]
+      text: |
+        <p><span style="color:#FFFFFF;"><strong>AI</strong></span></p>
+        <p><span style="color:#3B82F6;">↓</span></p>
+        <p><span style="color:#FFFFFF;"><strong>Standard MCP Layer</strong></span></p>
+        <p><span style="color:#3B82F6;">↓</span></p>
+        <p><span style="color:#FFFFFF;"><strong>AutoCAD</strong></span></p>
+        <p><span style="color:#FFFFFF;"><strong>Revit</strong></span></p>
+        <p><span style="color:#FFFFFF;"><strong>BIM</strong></span></p>
+        <p><span style="color:#FFFFFF;"><strong>Viewer</strong></span></p>
+        <p><span style="color:#FFFFFF;"><strong>ERP</strong></span></p>
+        <p><span style="color:#FFFFFF;"><strong>PLM</strong></span></p>
+        <p><span style="color:#FFFFFF;"><strong>Email</strong></span></p>
+        <p><span style="color:#FFFFFF;"><strong>Cloud</strong></span></p>
+  - elementId: right-summary
+    elementType: text
+    bounds: [700, 570, 500, 26]
+    content:
+      fontSize: 14
+      color: "#3B82F6"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>One protocol. Multiple applications.</strong></p>
+  - elementId: bottom-text
+    elementType: text
+    bounds: [60, 620, 1160, 60]
+    content:
+      fontSize: 16
+      color: "#1E3A5F"
+      fontFamily: "Arial"
+      align: [center, middle]
+      lineHeight: 1.5
+      text: |
+        <p><strong>One protocol.</strong> <span style="color:#64748B;">Multiple engineering applications.</span></p>
+        <p><strong>Future-proof architecture.</strong></p>

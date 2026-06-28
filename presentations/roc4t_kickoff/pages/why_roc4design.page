@@ -1,0 +1,154 @@
+pageType: content
+background:
+  type: solid
+  color: "#FFFFFF"
+elements:
+  - elementId: nav-label
+    elementType: text
+    bounds: [60, 24, 300, 22]
+    content:
+      style: "$caption"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>01 / Why Roc4Design?</p>
+  - elementId: heading
+    elementType: text
+    bounds: [60, 60, 700, 42]
+    content:
+      style: "$heading"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Why Roc4Design?</strong></p>
+  - elementId: accent-bar
+    elementType: shape
+    bounds: [60, 112, 80, 4]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#3B82F6"
+  - elementId: left-column-bg
+    elementType: shape
+    bounds: [60, 140, 540, 430]
+    shapeName: roundRect
+    adjustments: [4000]
+    fill:
+      type: solid
+      color: "#F1F5F9"
+    border:
+      style: solid
+      width: 1
+      color: "#E2E8F0"
+  - elementId: left-title
+    elementType: text
+    bounds: [80, 156, 500, 32]
+    content:
+      fontSize: 20
+      color: "#1E293B"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Today's Engineering</strong></p>
+  - elementId: left-divider
+    elementType: shape
+    bounds: [80, 194, 80, 3]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#EF4444"
+  - elementId: left-body
+    elementType: text
+    bounds: [80, 210, 500, 340]
+    content:
+      style: "$body"
+      fontSize: 16
+      color: "#64748B"
+      lineHeight: 1.8
+      align: [left, top]
+      text: |
+        <p>• Many disconnected tools</p>
+        <p>• AutoCAD</p>
+        <p>• Revit</p>
+        <p>• PDFs</p>
+        <p>• Emails</p>
+        <p>• Manual revisions</p>
+        <p>• Difficult collaboration</p>
+        <p>• Slow iterations</p>
+  - elementId: right-column-bg
+    elementType: shape
+    bounds: [640, 140, 580, 430]
+    shapeName: roundRect
+    adjustments: [4000]
+    fill:
+      type: solid
+      color: "#1E3A5F"
+    border:
+      style: solid
+      width: 1
+      color: "#1E3A5F"
+  - elementId: right-title
+    elementType: text
+    bounds: [660, 156, 540, 32]
+    content:
+      fontSize: 20
+      color: "#FFFFFF"
+      fontFamily: "Arial"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong>Tomorrow</strong></p>
+  - elementId: right-divider
+    elementType: shape
+    bounds: [660, 194, 80, 3]
+    shapeName: rect
+    fill:
+      type: solid
+      color: "#3B82F6"
+  - elementId: right-flow
+    elementType: text
+    bounds: [660, 210, 540, 340]
+    content:
+      fontSize: 15
+      color: "#94A3B8"
+      fontFamily: "Arial"
+      lineHeight: 1.5
+      align: [left, top]
+      text: |
+        <p><span style="color:#FFFFFF;"><strong>Natural Language</strong></span></p>
+        <p><span style="color:#3B82F6;">↓</span></p>
+        <p><span style="color:#FFFFFF;"><strong>AI Orchestrator</strong></span></p>
+        <p><span style="color:#3B82F6;">↓</span></p>
+        <p><span style="color:#FFFFFF;"><strong>Engineering Knowledge</strong></span></p>
+        <p><span style="color:#3B82F6;">↓</span></p>
+        <p><span style="color:#FFFFFF;"><strong>MCP Platform</strong></span></p>
+        <p><span style="color:#3B82F6;">↓</span></p>
+        <p><span style="color:#FFFFFF;"><strong>Engineering Software</strong></span></p>
+        <p><span style="color:#3B82F6;">↓</span></p>
+        <p><span style="color:#FFFFFF;"><strong>Validated Deliverables</strong></span></p>
+        <p><span style="color:#3B82F6;">↓</span></p>
+        <p><span style="color:#FFFFFF;"><strong>Digital Twin</strong></span></p>
+  - elementId: bottom-banner
+    elementType: shape
+    bounds: [60, 590, 1160, 60]
+    shapeName: roundRect
+    adjustments: [6000]
+    fill:
+      type: solid
+      color: "#F1F5F9"
+    border:
+      style: solid
+      width: 1
+      color: "#E2E8F0"
+  - elementId: bottom-banner-text
+    elementType: text
+    bounds: [80, 600, 1120, 40]
+    content:
+      fontSize: 15
+      color: "#1E3A5F"
+      fontFamily: "Arial"
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p><strong>Engineering is moving from software-centric workflows to AI-orchestrated workflows.</strong></p>
