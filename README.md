@@ -29,6 +29,7 @@ We do **NOT** build a custom AI orchestrator. Claude handles all reasoning, plan
 | [RACI & Roles](docs/RACI_Roles_and_Process.docx) | Who does what, RACI matrix | Whole team |
 | [Technical Architecture](docs/Technical_Architecture.md) | System design, APIs, data flow | Technical Lead, developers |
 | [Use Case 1 Spec](docs/Use_Case_1_AutoCAD_POC.md) | First concrete implementation task | Technical Lead, Production Team |
+| [Use Case 2 Kitchen Survey](docs/Use_Case_2_Commercial_Kitchen_Survey.md) | Photo-backed commercial kitchen existing-condition workflow | Technical Lead, Production Team |
 | [Claude MCP Architecture](docs/Claude_MCP_Architecture.md) | Detailed Claude + MCP implementation guide | Technical Lead |
 | [MCP Evaluation](docs/MCP_Server_Evaluation.md) | MCP server options & recommendation | Technical Lead |
 | [MCP Submodules Setup](docs/MCP_Submodules_Setup.md) | How to clone and update MCP base repositories | Technical Lead |
