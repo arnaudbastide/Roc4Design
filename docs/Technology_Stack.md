@@ -146,6 +146,7 @@ User (Natural Language) → Claude Desktop → MCP Protocol → Roc4t MCP Server
 | **Three.js + IFC.js** | Open source, local, full control | Requires IFC export, custom UI | **Phase 3** — best for data sovereignty |
 | **Autodesk Viewer / APS Viewer** | Native Autodesk ecosystem support, strong web review workflow | Cloud dependency, data handling and cost constraints | **Alternative** — if cloud review is acceptable |
 | **BIMvision** | Free desktop IFC viewer, fast stakeholder review without custom development | Desktop-only, review-focused, limited integration | **Supplemental review tool** |
+| **Blender + blender-mcp** | AI-assisted scene manipulation, useful for visualization and asset placement workflows | Not a BIM authoring source of truth; kitchen models still need asset libraries | **Supplemental visualization workflow** |
 | **Babylon.js** | Good for games, less BIM-focused | Would need custom IFC parser | Not recommended |
 | **Unity WebGL** | High fidelity, VR support | High dev effort, large builds | **Future** — for VR review |
 

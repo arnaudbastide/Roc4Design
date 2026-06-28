@@ -609,6 +609,14 @@ MCP Client (Claude/VS Code)
 | `APS sample` | `https://github.com/autodesk-platform-services/aps-sample-mcp-server-revit-automation` | MIT |
 | `mcp-server-for-revit-dotnet` | `https://github.com/mcp-servers-for-revit/mcp-server-for-revit-dotnet` | ? |
 
+### Blender / Visualization MCP Servers
+
+| Project | URL | License | Notes |
+|---------|-----|---------|-------|
+| `ahujasid/blender-mcp` | `https://github.com/ahujasid/blender-mcp` | TBD | Strong starting point for Blender + AI workflows; connects Blender to an LLM through MCP for prompt-assisted modeling and scene manipulation |
+
+**Kitchen model note**: ready-made professional kitchen geometry is usually sourced from 3D resource hubs or manufacturer/asset libraries, not MCP code repositories. Treat Blender MCP as the automation/control layer; treat kitchen equipment models as downloadable assets to import, normalize, tag, and place.
+
 ### MCP Registries & Directories
 
 | Directory | URL |
@@ -630,6 +638,7 @@ MCP Client (Claude/VS Code)
 |-------|--------------|--------------|-------------|
 | **Phase 1 (AutoCAD)** | `ranvirw18/autocad-mcp-server` or `Porta048/AutoCad-MCP` | MCP server skeleton, COM connection, basic drawing tools | Layer validation, blocks, dimensions, export, standards engine, security, audit |
 | **Phase 2 (Revit)** | `Sam-AEC/aec-model-bridge` | Python hub, C# add-in, 100 tools | Roc4t BIM standards, AutoCAD sync, QA tools |
+| **Phase 3 (Review/Visualization)** | `ahujasid/blender-mcp` + asset libraries | Blender MCP control pattern | Kitchen asset import workflow, tagging, scale checks, IFC/glTF export |
 
 ### Time Savings Estimate
 
