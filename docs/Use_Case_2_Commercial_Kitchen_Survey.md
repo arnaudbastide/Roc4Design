@@ -119,6 +119,48 @@ Use BIMvision, Autodesk Viewer / APS Viewer, or the planned local IFC viewer to 
 - Ceiling service conflicts
 - Maintenance access
 
+## Archviz Asset Sourcing
+
+For kitchen visualization, use asset libraries for geometry and materials rather than expecting MCP code repositories to provide finished appliance models.
+
+### Best Sources
+
+| Source | Best Use |
+|---|---|
+| Evermotion / Archmodels | Polished kitchen furniture, refrigerators, ovens, sinks, stoves, cabinets |
+| Chaos Cosmos | Fast archviz scenes with ready-to-use furniture, fixtures, and props |
+| Sketchfab | Specific kitchen appliances, decor packs, and free/low-cost model searches |
+| Blender Market / Superhive | Targeted prop packs such as cutlery, utensils, containers, and small appliances |
+| Chocofur-style interior collections | Broad Blender interior libraries for kitchen and general archviz dressing |
+
+### Prioritized Asset List
+
+Start with the main fixed assets:
+
+- Refrigerator
+- Oven
+- Stove/cooktop
+- Dishwasher
+- Sink
+- Cabinets
+- Kitchen islands
+- Countertops
+
+Then add small scene props:
+
+- Blender
+- Toaster
+- Jars
+- Cups
+- Utensils
+- Cutting boards
+- Bottles
+- Containers
+
+### Practical Recommendation
+
+Use Evermotion or Chaos Cosmos for large furniture and appliance pieces, then fill detail with Blender Market / Superhive or Sketchfab prop packs. This gives a good balance of quality, speed, and realism for kitchen archviz. Blender MCP can then be used as the control layer for importing, placing, tagging, and adjusting these assets.
+
 ## Implementation Notes
 
 - Photos alone are not enough for dimensionally reliable CAD.
