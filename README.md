@@ -31,6 +31,7 @@ We do **NOT** build a custom AI orchestrator. Claude handles all reasoning, plan
 | [Use Case 1 Spec](docs/Use_Case_1_AutoCAD_POC.md) | First concrete implementation task | Technical Lead, Production Team |
 | [Claude MCP Architecture](docs/Claude_MCP_Architecture.md) | Detailed Claude + MCP implementation guide | Technical Lead |
 | [MCP Evaluation](docs/MCP_Server_Evaluation.md) | MCP server options & recommendation | Technical Lead |
+| [MCP Submodules Setup](docs/MCP_Submodules_Setup.md) | How to clone and update MCP base repositories | Technical Lead |
 | [Existing Tools Research](docs/Existing_Tools_Research.md) | Real GitHub MCP tools evaluation | Technical Lead |
 | [Technology Stack](docs/Technology_Stack.md) | Technology decisions | Technical Lead |
 | [Standards Checklist](docs/Standards_Checklist.md) | Standards to define before automation | Business Lead, Production Team |
