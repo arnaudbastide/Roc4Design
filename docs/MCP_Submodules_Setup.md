@@ -28,3 +28,4 @@ git submodule update --init --recursive
 - The root repository tracks only the submodule commit pointers.
 - Local changes inside a submodule must be committed in that submodule's own repository or fork.
 - For AutoCAD LT support, evaluate `puran-water/autocad-mcp` as the next candidate because it uses AutoLISP and supports headless DXF generation.
+- See [`MCP_Fork_Strategy.md`](MCP_Fork_Strategy.md) before committing Roc4Design-specific changes inside submodules.
