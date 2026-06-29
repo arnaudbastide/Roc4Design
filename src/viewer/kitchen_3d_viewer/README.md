@@ -4,7 +4,13 @@ This is a lightweight browser-based 3D review prototype for the high-end commerc
 
 Open `index.html` in a browser. It uses Three.js from a CDN, so internet access is required the first time the page loads. No build step is required.
 
-The scene reads its core dimensions, material notes, zones, and equipment IDs from `kitchen-spec.js`.
+The scene reads its core dimensions, material notes, zones, equipment IDs, equipment positions, and fixture geometry from `kitchen-spec.js`. That module is generated from the AutoCAD MCP planner's `kitchen_layout_to_viewer_spec()` export shape.
+
+Regenerate it from the repository root:
+
+```powershell
+python .\tools\export_kitchen_viewer_spec.py
+```
 
 ## Scene Contents
 

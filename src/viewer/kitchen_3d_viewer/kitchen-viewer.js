@@ -3,6 +3,8 @@ import { OrbitControls } from "https://unpkg.com/three@0.164.1/examples/jsm/cont
 import { kitchenSpec } from "./kitchen-spec.js";
 
 const kitchen = kitchenSpec.dimensions;
+const equipmentById = new Map(kitchenSpec.equipment.map((item) => [item.id, item]));
+const fixturesById = new Map(kitchenSpec.fixtures.map((item) => [item.id, item]));
 
 const canvas = document.querySelector("#scene");
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
@@ -44,6 +46,24 @@ function box(name, x, y, z, w, h, d, material, castShadow = true) {
   return mesh;
 }
 
+function equipmentBox(id, material, yOffset = 0) {
+  const item = equipmentById.get(id);
+  if (!item) {
+    return null;
+  }
+
+  return box(`${item.id} ${item.label}`, item.x, yOffset, item.y, item.width, item.height, item.depth, material);
+}
+
+function fixtureBox(id, material, yOffset = 0) {
+  const item = fixturesById.get(id);
+  if (!item) {
+    return null;
+  }
+
+  return box(`${item.id} ${item.label}`, item.x, yOffset, item.y, item.width, item.height, item.depth, material);
+}
+
 function addFloor() {
   box("12 in matte gray ceramic tile floor", 0, -0.02, 0, kitchen.width, 0.04, kitchen.depth, materials.floor, false);
 
@@ -76,34 +96,46 @@ function addCookingLine() {
   box("15 ft x 4 ft massive stainless exhaust hood", hoodX, 2.15, hoodZ, kitchen.hoodLength, 0.55, kitchen.hoodDepth, materials.hvac);
   box("hood duct riser", hoodX + kitchen.hoodLength / 2 - 0.25, 2.7, hoodZ + 0.3, 0.5, 0.55, 0.45, materials.darkSteel);
 
-  box("EQ-RANGE-01 6-burner gas range", hoodX + 0.2, 0.02, z + 0.05, 0.95, 0.9, cd - 0.1, materials.darkSteel);
-  box("EQ-RANGE-02 6-burner gas range", hoodX + 1.25, 0.02, z + 0.05, 0.95, 0.9, cd - 0.1, materials.darkSteel);
-  box("EQ-GRIDDLE-01 flat-top griddle", hoodX + 2.3, 0.94, z + 0.08, 1.05, 0.08, cd - 0.16, materials.black);
-  box("EQ-COMBI-01 stacked combi oven", hoodX + kitchen.hoodLength + 0.25, 0, z + 0.05, 1.0, 1.8, cd - 0.1, materials.steel);
-  box("combi glass doors", hoodX + kitchen.hoodLength + 0.27, 0.35, z + 0.01, 0.96, 1.1, 0.04, materials.glass, false);
+  equipmentBox("EQ-RANGE-01", materials.darkSteel, 0.02);
+  equipmentBox("EQ-RANGE-02", materials.darkSteel, 0.02);
+
+  const griddle = equipmentById.get("EQ-GRIDDLE-01");
+  if (griddle) {
+    box(`${griddle.id} ${griddle.label} base`, griddle.x, 0.02, griddle.y, griddle.width, griddle.height, griddle.depth, materials.darkSteel);
+    box(`${griddle.id} flat-top cooking plate`, griddle.x, griddle.height + 0.04, griddle.y + 0.04, griddle.width, 0.06, griddle.depth - 0.08, materials.black);
+  }
+
+  const combi = equipmentById.get("EQ-COMBI-01");
+  if (combi) {
+    box(`${combi.id} ${combi.label}`, combi.x, 0, combi.y, combi.width, combi.height, combi.depth, materials.steel);
+    box("combi glass doors", combi.x + 0.02, 0.35, combi.y - 0.04, combi.width - 0.04, 1.1, 0.04, materials.glass, false);
+  }
 }
 
 function addPrepIslands() {
-  const w = 2.4;
-  const d = 1.15;
-  const x = (kitchen.width - w) / 2;
-  const z1 = kitchen.depth * 0.34;
-  const z2 = kitchen.depth * 0.58;
-  box("multi-tier prep island 1 base", x, 0, z1, w, kitchen.counterHeight, d, materials.steel);
-  box("multi-tier prep island 1 upper shelf", x + 0.18, kitchen.counterHeight + 0.32, z1 + 0.18, w - 0.36, 0.08, d - 0.36, materials.steel);
-  box("multi-tier prep island 2 base", x, 0, z2, w, kitchen.counterHeight, d, materials.steel);
-  box("multi-tier prep island 2 upper shelf", x + 0.18, kitchen.counterHeight + 0.32, z2 + 0.18, w - 0.36, 0.08, d - 0.36, materials.steel);
+  for (const id of ["FX-ISLAND-01", "FX-ISLAND-02"]) {
+    const island = fixturesById.get(id);
+    if (!island) {
+      continue;
+    }
+
+    box(`${island.id} ${island.label} base`, island.x, 0, island.y, island.width, island.height, island.depth, materials.steel);
+    box(`${island.id} upper shelf`, island.x + 0.18, island.height + 0.32, island.y + 0.18, island.width - 0.36, 0.08, island.depth - 0.36, materials.steel);
+  }
 }
 
 function addWarewashingAndStorage() {
   const cd = kitchen.counterDepth;
   box("right side stainless worktop", kitchen.width - cd, 0, 0.7, cd, kitchen.counterHeight, kitchen.depth - 1.4, materials.steel);
-  box("EQ-DISH-01 hood-type dishwasher", kitchen.width - cd - 0.02, 0, kitchen.depth * 0.38, cd, 1.6, 1.15, materials.steel);
-  box("dishwasher hood", kitchen.width - cd - 0.05, 1.65, kitchen.depth * 0.38, cd + 0.1, 0.25, 1.15, materials.hvac);
-  box("commercial sink basin", kitchen.width - cd + 0.08, kitchen.counterHeight + 0.01, kitchen.depth * 0.22, cd - 0.16, 0.08, 0.65, materials.darkSteel);
+  const dishwasher = equipmentById.get("EQ-DISH-01");
+  if (dishwasher) {
+    box(`${dishwasher.id} ${dishwasher.label}`, dishwasher.x, 0, dishwasher.y, dishwasher.width, dishwasher.height, dishwasher.depth, materials.steel);
+    box("dishwasher hood", dishwasher.x - 0.03, dishwasher.height + 0.05, dishwasher.y, dishwasher.width + 0.06, 0.25, dishwasher.depth, materials.hvac);
+  }
+  fixtureBox("EQ-SINK-01", materials.darkSteel, kitchen.counterHeight + 0.01);
 
-  box("cold dry storage shelving left", 0.08, 0, 0.65, 0.62, 2.0, 2.3, materials.steel);
-  box("cold dry storage shelving back", 0.9, 0, 0.08, 2.6, 2.0, 0.62, materials.steel);
+  fixtureBox("EQ-SHELF-01", materials.steel);
+  fixtureBox("EQ-SHELF-02", materials.steel);
 }
 
 function addCeiling() {
