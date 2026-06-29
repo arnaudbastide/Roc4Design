@@ -8,6 +8,7 @@ on:
   pull_request:
     paths:
       - "src/viewer/kitchen_3d_viewer/**"
+  workflow_dispatch: {}
 
 jobs:
   viewer-smoke-test:
