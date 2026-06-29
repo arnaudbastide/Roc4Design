@@ -1,18 +1,8 @@
 import * as THREE from "https://unpkg.com/three@0.164.1/build/three.module.js";
 import { OrbitControls } from "https://unpkg.com/three@0.164.1/examples/jsm/controls/OrbitControls.js";
+import { kitchenSpec } from "./kitchen-spec.js";
 
-const FT_TO_M = 0.3048;
-const kitchen = {
-  width: 35 * FT_TO_M,
-  depth: 45 * FT_TO_M,
-  height: 3.0,
-  counterHeight: 36 * 0.0254,
-  counterDepth: 30 * 0.0254,
-  aisleWidth: 4.5 * FT_TO_M,
-  hoodLength: 15 * FT_TO_M,
-  hoodDepth: 4 * FT_TO_M,
-  tileSize: 12 * 0.0254,
-};
+const kitchen = kitchenSpec.dimensions;
 
 const canvas = document.querySelector("#scene");
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });

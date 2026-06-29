@@ -4,6 +4,8 @@ This is a lightweight browser-based 3D review prototype for the high-end commerc
 
 Open `index.html` in a browser. It uses Three.js from a CDN, so internet access is required the first time the page loads. No build step is required.
 
+The scene reads its core dimensions, material notes, zones, and equipment IDs from `kitchen-spec.js`.
+
 ## Scene Contents
 
 - 35 ft x 45 ft room shell
