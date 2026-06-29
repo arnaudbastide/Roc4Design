@@ -1,5 +1,7 @@
 # Kitchen AutoCAD and 3D View Project Plan
 
+> **Roadmap, not status.** This is the original vision/plan document. For what's actually built and verified right now, see [Kitchen_Workflow_Verification.md](Kitchen_Workflow_Verification.md).
+
 ## Objective
 
 Create a full AutoCAD-to-3D workflow for a high-end commercial kitchen. The final workflow should produce a measured 2D AutoCAD plan, structured metadata for BIM/IFC, and a 3D review scene suitable for kitchen coordination and archviz.

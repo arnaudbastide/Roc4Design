@@ -1,5 +1,7 @@
 # Kitchen Workflow Verification
 
+> **Current verified status, not the original plan.** For the original vision/roadmap this implements, see [Kitchen_AutoCAD_3D_Project_Plan.md](Kitchen_AutoCAD_3D_Project_Plan.md). This document tracks what's actually built and verified as of the latest update — update it whenever verification status changes, rather than letting it silently drift from reality.
+
 ## Scope
 
 This verifies the current high-end commercial kitchen milestone:
@@ -21,11 +23,11 @@ python .\tools\export_high_end_kitchen_dxf.py
 python .\tools\verify_high_end_kitchen_dxf.py
 ```
 
-Run from `src/mcp/roc4design-autocad-mcp`:
+Run from `src/mcp/roc4design-autocad-mcp` (using the `.venv` — Python 3.12, the canonical environment per `pyproject.toml`'s `requires-python = ">=3.10"`; Python 3.9 is no longer tracked):
 
 ```powershell
-python -m pytest tests
-python -m compileall src\roc4design_autocad_mcp
+.\.venv\Scripts\python.exe -m pytest tests
+.\.venv\Scripts\python.exe -m compileall src\roc4design_autocad_mcp
 ```
 
 Run from the repository root:
@@ -37,19 +39,17 @@ node --check .\src\viewer\kitchen_3d_viewer\kitchen-spec.js
 
 ## Current Evidence
 
-- AutoCAD MCP tests pass: 19 passed, 1 warning.
+- AutoCAD MCP tests pass: 25 passed (Python 3.12, `.venv`), no warnings.
 - MCP package compile check passes.
 - Viewer JavaScript syntax check passes.
 - Generated viewer spec syntax check passes.
 - `tools/verify_kitchen_viewer_spec.py` checks that `kitchen-spec.js` exactly matches the canonical Python planner output.
 - `tools/export_high_end_kitchen_dxf.py` writes `src/mcp/roc4design-autocad-mcp/output/ROC4T-KITCHEN-HIGH-END-001.dxf`.
 - `tools/verify_high_end_kitchen_dxf.py` checks the generated DXF for canonical Roc4Design layers and kitchen tags. Current DXF verification passes with 56 entities and no missing required layers or tags.
-- `audit_kitchen_layout_2d` checks the canonical planner output for required layers, zones, equipment, fixtures, and operation count.
-- `list_entities` and `get_entity_properties` read from in-session `DrawingState`, not a live CAD query — they work with no CAD application installed at all.
-- `export_high_end_kitchen_ifc` writes an IFC file when `ifcopenshell` is installed. Verified directly: 17 products (7 zones, 5 equipment, 5 fixtures).
-- `query_kitchen_ifc` round-trips generated IFC proxy elements by category. Verified directly: equipment category returns 5 elements.
-
-**Caveat**: the four bullets above describing `server.py` functions (`audit_kitchen_layout_2d`, `list_entities`, `get_entity_properties`) are code-reviewed, not run-verified — `server.py` cannot currently be imported on this machine. See "Python Version Blocker" below.
+- `audit_kitchen_layout_2d`, `list_entities`, `export_high_end_kitchen_ifc`, and `export_high_end_kitchen_dxf` have all been **run-verified through `server.py`/`CADService()` itself** (not bypassed via direct module imports) — see "Python Version Blocker" below.
+- `export_high_end_kitchen_ifc` writes an IFC file with real geometry. Verified: 17 products (7 zones, 5 equipment, 5 fixtures), each with a correct `ObjectPlacement`/`Representation` matching the planner's coordinates exactly.
+- `query_kitchen_ifc` round-trips generated IFC proxy elements by category. Verified: equipment category returns 5 elements.
+- `tests/test_dxf_export.py` (new) covers rectangle→polyline, text insert/value, real dimension entities, the signed-offset helper, failure isolation, and a round-trip check.
 
 ## Required DXF Layers
 
@@ -81,20 +81,14 @@ Before uninstalling, live drawing was fully verified: 56/56 operations executed 
 
 ## IFC Status
 
-`ifcopenshell` is installed and importable locally:
-
-```text
-0.8.4.post1
-```
+`ifcopenshell` is installed and importable locally (0.8.5 in the `.venv`).
 
 The canonical kitchen IFC export has been verified:
 
 - Output: `src/mcp/roc4design-autocad-mcp/output/ROC4T-KITCHEN-HIGH-END-001.ifc`
-- Products: 17
-- Zones: 7
-- Equipment: 5
-- Fixtures: 5
+- Products: 17 (7 zones, 5 equipment, 5 fixtures)
 - `query_kitchen_ifc(..., "equipment")` returns 5 equipment elements.
+- **Geometry**: every product now has a real `ObjectPlacement` and `Representation` (an extruded `IfcRectangleProfileDef` box), built via `ifcopenshell.api.context`/`geometry` helpers using the same x/y/width/depth/height already in the planner output. Verified by computing each shape's world-space bounding box with `ifcopenshell.geom` (`use-world-coords=True`) and asserting it matches the plan's coordinates exactly — e.g. `EQ-RANGE-01` resolves to (3.05, 13.01)–(3.95, 13.77), matching `plan_kitchen_layout()`'s output exactly. Zones get a thin 0.05m nominal slab since the planner only gives them a footprint, not a height. The file is no longer visually empty in a BIM viewer.
 
 FreeCAD is installed locally and can be used as the no-cost IFC review tool:
 
@@ -118,8 +112,44 @@ Two real bugs surfaced once `server.py` could finally be imported and run for th
 1. `pyproject.toml` had an invalid classifier (`"Topic :: Scientific/Engineering :: Computer Aided Design"` is not a real PyPI trove classifier) that made `hatchling` refuse to build the editable install. Fixed to `"Topic :: Scientific/Engineering"`.
 2. `server.py`'s `export_high_end_kitchen_dxf` called `write_operations_to_dxf` without importing it from `dxf_export` — a `NameError` that no test had ever caught, because no test imports `server.py`. Fixed; also added `ezdxf` as a declared base dependency (it had only ever been installed ad hoc, never declared).
 
-**Verified for real, through `server.py` itself** (not bypassing it via direct module imports, as everything before this was): `audit_kitchen_layout_2d`, `list_entities`, `export_high_end_kitchen_ifc` (17 products), and `export_high_end_kitchen_dxf` (56/56 operations) all work correctly via `CADService()`. `pytest tests/` passes 19/19 under Python 3.12 too, with no leftover `asyncio_mode` config warning (that warning was itself a symptom of `pytest-asyncio` never being installable under 3.9).
+**Verified for real, through `server.py` itself** (not bypassing it via direct module imports, as everything before this was): `audit_kitchen_layout_2d`, `list_entities`, `export_high_end_kitchen_ifc` (17 products), and `export_high_end_kitchen_dxf` (56/56 operations) all work correctly via `CADService()`. `pytest tests/` passes (25/25 as of the latest test additions) under Python 3.12 too, with no leftover `asyncio_mode` config warning (that warning was itself a symptom of `pytest-asyncio` never being installable under 3.9).
+
+## 3D Viewer — real bug found and fixed
+
+The viewer was **silently completely broken** before this fix — every prior "the scene reads from kitchen-spec.js" claim was true at the code level but had never actually been confirmed to render, because nothing had opened it in a real (isolated) browser and checked the console.
+
+Root cause: `kitchen-viewer.js` imports `OrbitControls` from the Three.js examples CDN bundle, which internally does `import * as THREE from "three"` — a **bare module specifier**. Bare specifiers only resolve via a bundler or an explicit `<script type="importmap">`; plain `<script type="module">` in a browser cannot resolve `"three"` on its own. The browser console showed:
+
+```
+Uncaught TypeError: Failed to resolve module specifier "three". Relative references must start with either "/", "./", or "../".
+```
+
+That error aborts the entire module's execution before any scene-building code runs — so the canvas never painted anything. It looked deceptively like it was "working" in screenshots because `index.html`'s plain CSS (`body { background: #f3f4f6 }`) happens to be nearly the same color as the intended `scene.background`, and the static HTML overlay (info panel, "drag to orbit" hint) rendered fine since neither depends on the JS.
+
+**Fix**: added an import map to `index.html` mapping `"three"` to the same `unpkg.com/three@0.164.1` URL already used directly elsewhere:
+```html
+<script type="importmap">
+  { "imports": { "three": "https://unpkg.com/three@0.164.1/build/three.module.js" } }
+</script>
+```
+
+**Verified properly this time** — isolated headless Chrome (`--user-data-dir` pointing at a fresh profile; earlier attempts were accidentally being routed into the user's already-running Chrome instance via its single-instance lock, which produced misleading/inconsistent results). Confirmed via console capture: zero `Uncaught`/`TypeError` errors after the fix. Confirmed via screenshot: real 3D geometry renders — floor, prep islands, ceiling LED grid, HVAC grilles, dishwasher hood, all in the correct stainless/blue/dark-steel colors matching the legend.
+
+A follow-up top-down camera test to double-check island/shelving proportions was inconclusive (positioning the camera nearly straight overhead without adjusting `camera.up` hits OrbitControls' gimbal-lock-like degenerate case at the pole, making screen-space axis orientation unreliable) — not treated as a finding either way. The default oblique camera angle is the reliable evidence and looks correct.
+
+## FreeCAD Visual Verification — done
+
+Both the DXF and IFC outputs were opened in FreeCAD (`C:\Program Files\FreeCAD 1.1\bin\`) and confirmed correct, independently of all the Python-side checks above:
+
+- **DXF**: `freecadcmd.exe`'s own importer reported exact entity counts matching the planner's operations — 24 `LWPOLYLINE` (1 wall + 3 furniture runs + 5 fixtures + 5 equipment + 1 hood + 3 floor drains + 6 ceiling grilles), 30 `TEXT`, 2 `DIMENSION`. A GUI screenshot (top view) showed the room outline with equipment/fixtures in magenta (`ROC4T-FURN`, AutoCAD color 6), ceiling grilles/hood in cyan (`ROC4T-MEP-HVAC`, color 4), and floor drains in green (`ROC4T-MEP-PLUMB`, color 3) — exactly matching the layers' assigned colors in `kitchen_layout.py`. One harmless note: FreeCAD's DXF importer doesn't support the `SOLID` entity type, used once for a dimension arrowhead — a FreeCAD limitation, not a file defect.
+- **IFC**: FreeCAD 1.1's native IFC workflow (`nativeifc.ifc_tools.create_document`, not the older `importIFC`/`Arch` path) imported all 17 products. Bounding boxes read back from FreeCAD's own `ifcopenshell`-based importer matched the planner's coordinates to the millimeter — e.g. `FX-ISLAND-01`: (4160, 4660, 0)–(6510, 5480, 910)mm = exactly 4.16, 4.66–6.51, 5.48m, 0.91m tall. This is a second, fully independent confirmation of the geometry fix (the first being `ifcopenshell.geom` bounding-box checks done directly in Python). A GUI screenshot (top view) showed the same recognizable layout: perimeter zones, two islands centered in the aisle, equipment along the back wall, warewashing area at the bottom-right.
+
+(Side note from this check: capturing a screenshot of a specific GUI window requires targeting that window's handle via `GetWindowRect`, not a full-desktop capture — a full-desktop screenshot during this work briefly captured an unrelated foreground window instead of FreeCAD.)
 
 ## Current Milestone Status
 
-The schematic CAD, IFC, and 3D review pipeline is implemented and repeatably verified through generated DXF, generated IFC, and generated Three.js viewer spec — all license-free and requiring no CAD application. Live GstarCAD COM drawing was verified in-session at 56/56 operations before GstarCAD was uninstalled (license unusable); it is no longer part of the active pipeline. The MCP server wrapper (`server.py`) itself remains unverified pending a Python 3.10+ environment.
+The schematic CAD, IFC, and 3D review pipeline is implemented and repeatably verified end-to-end through generated DXF (with real polylines/dimensions), generated IFC (with real geometry, not just tagged proxies), and the Three.js viewer (now confirmed actually rendering, not just structurally correct) — all license-free and requiring no CAD application, and now visually confirmed in FreeCAD on top of the programmatic checks. The MCP server wrapper (`server.py`) itself is now run-verified under Python 3.12, including the four previously-unverified tools. Live GstarCAD COM drawing was verified in-session at 56/56 operations before GstarCAD was uninstalled (license unusable); it is no longer part of the active pipeline.
+
+**Hardening added**: a CI workflow per repo (`src/mcp/roc4design-autocad-mcp/.github/workflows/ci.yml` running the Python test suite plus a `server.py` import smoke test across Python 3.10–3.12 on Windows; `.github/workflows/kitchen-viewer-ci.yml` running a headless-browser smoke test that fails the build on any console error — verified to both pass on current code and correctly fail when the import-map bug was temporarily reintroduced), a `.python-version` pin (3.12), and updated README setup instructions.
+
+**Remaining open item**: deciding whether to add a Blender pass for the 3D view (the IFC now has real geometry, making a Bonsai/BlenderBIM import viable) — not started, no decision made yet.

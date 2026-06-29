@@ -1,0 +1,63 @@
+name: Kitchen 3D Viewer CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/viewer/kitchen_3d_viewer/**"
+  pull_request:
+    paths:
+      - "src/viewer/kitchen_3d_viewer/**"
+
+jobs:
+  viewer-smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Syntax check viewer JS
+        run: |
+          node --check src/viewer/kitchen_3d_viewer/kitchen-viewer.js
+          node --check src/viewer/kitchen_3d_viewer/kitchen-spec.js
+
+      - name: Set up Chrome
+        uses: browser-actions/setup-chrome@v1
+
+      - name: Serve viewer directory
+        run: |
+          cd src/viewer/kitchen_3d_viewer
+          python3 -m http.server 8743 --bind 127.0.0.1 &
+          sleep 1
+          curl -sf http://127.0.0.1:8743/index.html > /dev/null
+
+      # Catches the class of bug found in this project: a bare module specifier
+      # ("three") inside a CDN-loaded examples/jsm file (OrbitControls) that only
+      # resolves with an <script type="importmap"> - node --check and unit tests
+      # cannot catch this, since it's a browser-only module-resolution error.
+      # Must use an isolated --user-data-dir, otherwise on a machine with another
+      # Chrome instance running this silently routes into that instance instead
+      # of launching a real isolated one.
+      - name: Headless browser smoke test (fail on any console error)
+        run: |
+          PROFILE_DIR=$(mktemp -d)
+          CONSOLE_LOG=$(mktemp)
+          google-chrome-stable \
+            --headless=new \
+            --no-sandbox \
+            --disable-extensions \
+            --disable-background-networking \
+            --disable-sync \
+            --disable-default-apps \
+            --user-data-dir="$PROFILE_DIR" \
+            --enable-logging=stderr \
+            --v=1 \
+            --virtual-time-budget=10000 \
+            --dump-dom \
+            http://127.0.0.1:8743/index.html > /dev/null 2> "$CONSOLE_LOG"
+
+          if grep -E "Uncaught|TypeError|Failed to resolve module" "$CONSOLE_LOG"; then
+            echo "Console errors found - viewer is broken:"
+            cat "$CONSOLE_LOG"
+            exit 1
+          fi
+          echo "No console errors - viewer loads cleanly."
