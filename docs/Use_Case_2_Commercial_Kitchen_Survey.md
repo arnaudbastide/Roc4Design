@@ -4,6 +4,8 @@
 
 Use site photos of a commercial kitchen to prepare an existing-condition CAD/BIM brief. The first goal is not full automation from images alone. The goal is to convert visual evidence into a structured survey checklist, preliminary layout assumptions, and CAD/BIM object requirements.
 
+For the full high-end 35 ft x 45 ft kitchen implementation plan, see [`Kitchen_AutoCAD_3D_Project_Plan.md`](Kitchen_AutoCAD_3D_Project_Plan.md).
+
 ## Visual Observations From Reference Photos
 
 - Narrow galley-style commercial kitchen.
