@@ -2,7 +2,7 @@ name: Kitchen 3D Viewer CI
 
 on:
   push:
-    branches: [main]
+    branches: [master]
     paths:
       - "src/viewer/kitchen_3d_viewer/**"
   pull_request:
