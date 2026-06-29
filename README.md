@@ -31,6 +31,7 @@ We do **NOT** build a custom AI orchestrator. Claude handles all reasoning, plan
 | [Use Case 1 Spec](docs/Use_Case_1_AutoCAD_POC.md) | First concrete implementation task | Technical Lead, Production Team |
 | [Use Case 2 Kitchen Survey](docs/Use_Case_2_Commercial_Kitchen_Survey.md) | Photo-backed commercial kitchen existing-condition workflow | Technical Lead, Production Team |
 | [Kitchen AutoCAD + 3D Plan](docs/Kitchen_AutoCAD_3D_Project_Plan.md) | Full high-end kitchen CAD, BIM/IFC, and 3D review plan | Technical Lead, Production Team |
+| [Kitchen 3D Viewer Prototype](src/viewer/kitchen_3d_viewer/README.md) | Static Three.js review scene for the high-end kitchen brief | Technical Lead, Production Team |
 | [Claude MCP Architecture](docs/Claude_MCP_Architecture.md) | Detailed Claude + MCP implementation guide | Technical Lead |
 | [MCP Evaluation](docs/MCP_Server_Evaluation.md) | MCP server options & recommendation | Technical Lead |
 | [MCP Submodules Setup](docs/MCP_Submodules_Setup.md) | How to clone and update MCP base repositories | Technical Lead |
